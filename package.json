@@ -18,7 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"node server/index.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -30,7 +30,9 @@
       "plugin:perfectionist/recommended-natural",
       "prettier"
     ],
-    "plugins": ["perfectionist"]
+    "plugins": [
+      "perfectionist"
+    ]
   },
   "browserslist": {
     "production": [
@@ -45,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^8.2.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-perfectionist": "^1.5.1",
     "prettier": "^3.0.2"
