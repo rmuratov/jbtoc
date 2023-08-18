@@ -11,7 +11,7 @@ export interface TOCPage {
   doNotShowWarningLink: boolean;
   id: TOCPageId;
   level: number;
-  pages: TOCPageId[];
+  pages?: TOCPageId[];
   parentId: string;
   title: string;
   url: string;
