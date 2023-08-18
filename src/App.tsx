@@ -7,9 +7,7 @@ function App() {
 
   return (
     <div className={s.app}>
-      <aside>
-        <TableOfContents data={data} isLoading={state === 'loading'} />
-      </aside>
+      <TableOfContents data={data} isLoading={state === 'loading'} />
 
       <main>
         <h1>JB TOC</h1>

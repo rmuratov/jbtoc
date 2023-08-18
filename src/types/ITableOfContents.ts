@@ -1,20 +1,20 @@
 export interface ITableOfContents {
-  entities: TOCEntities;
-  topLevelIds: TOCPageId[];
+  entities: TocEntities;
+  topLevelIds: TocPageId[];
 }
 
-export interface TOCEntities {
-  pages: Record<TOCPageId, TOCPage>;
+export interface TocEntities {
+  pages: Record<TocPageId, TocPage>;
 }
 
-export interface TOCPage {
+export interface TocPage {
   doNotShowWarningLink: boolean;
-  id: TOCPageId;
+  id: TocPageId;
   level: number;
-  pages?: TOCPageId[];
+  pages?: TocPageId[];
   parentId: string;
   title: string;
   url: string;
 }
 
-export type TOCPageId = string;
+export type TocPageId = string;

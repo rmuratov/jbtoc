@@ -1,0 +1,19 @@
+.link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+  cursor: pointer;
+  padding-left: var(--toc-item-left-offset);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.icon {
+  position: absolute;
+  top: 25%;
+  margin-left: -20px;
+}

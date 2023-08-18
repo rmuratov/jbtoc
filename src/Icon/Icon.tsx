@@ -3,10 +3,10 @@ import { FC } from 'react';
 
 import s from './Icon.module.scss';
 
-export const Icon: FC<IconProps> = ({ isExpanded }) => {
+export const Icon: FC<IconProps> = ({ className, isExpanded }) => {
   return (
     <svg
-      className={cx(s.icon, isExpanded && s.expanded)}
+      className={cx(s.icon, isExpanded && s.expanded, className)}
       fill="none"
       height="16"
       viewBox="0 0 16 16"
@@ -19,5 +19,6 @@ export const Icon: FC<IconProps> = ({ isExpanded }) => {
 };
 
 export interface IconProps {
+  className?: string;
   isExpanded?: boolean;
 }

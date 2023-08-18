@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
 import { ITableOfContents } from '../types/ITableOfContents';
-import { TOCItem } from './TOCItem/TOCItem';
 import s from './TableOfContents.module.scss';
+import { TocTree } from './TocTree/TocTree';
 
 export const TableOfContents: FC<TableOfContentsProps> = ({ data, isLoading }) => {
   if (isLoading) {
@@ -10,9 +10,11 @@ export const TableOfContents: FC<TableOfContentsProps> = ({ data, isLoading }) =
   }
 
   return (
-    <ul className={s.ul}>
-      {data?.topLevelIds.map(id => <TOCItem id={id} key={id} pages={data?.entities.pages} />)}
-    </ul>
+    <nav className={s.container}>
+      <ul className={s.ul}>
+        {data?.topLevelIds.map(id => <TocTree id={id} key={id} pages={data?.entities.pages} />)}
+      </ul>
+    </nav>
   );
 };
 
