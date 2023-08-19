@@ -9,7 +9,7 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const { pages, setActivePageId } = useTocContext();
 
-  const h = useHighlightMode(id, highlight);
+  const highlightMode = useHighlightMode(id, highlight);
 
   const page = pages[id];
 
@@ -22,9 +22,9 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
   return (
     <>
       <li className={s.listItem} onClick={handleClick}>
-        <TocLink highlight={h} isExpanded={isExpanded} page={page} />
+        <TocLink highlight={highlightMode} isExpanded={isExpanded} page={page} />
       </li>
-      {isExpanded && page.pages?.map(p => <TocTreeNode highlight={h} id={p} key={p} />)}
+      {isExpanded && page.pages?.map(p => <TocTreeNode highlight={highlightMode} id={p} key={p} />)}
     </>
   );
 };
