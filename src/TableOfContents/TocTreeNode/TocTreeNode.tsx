@@ -7,7 +7,7 @@ import s from './TocTreeNode.module.scss';
 
 export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const { pages, setActivePageId } = useTocContext();
+  const { activePageId, pages, setActivePageId } = useTocContext();
 
   const highlightMode = useHighlightMode(id, highlight);
 
@@ -16,7 +16,13 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
   const handleClick: MouseEventHandler<HTMLLIElement> = e => {
     e.preventDefault();
     setActivePageId(id);
-    setIsExpanded(isExpanded => !isExpanded);
+    setIsExpanded(isExpanded => {
+      if (isExpanded && id !== activePageId) {
+        return true;
+      }
+
+      return !isExpanded;
+    });
   };
 
   return (
