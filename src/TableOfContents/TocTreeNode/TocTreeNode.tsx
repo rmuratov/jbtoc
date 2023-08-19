@@ -1,8 +1,9 @@
-import { FC, MouseEventHandler, useState } from 'react';
+import { type FC, type MouseEventHandler, useState } from 'react';
 
 import { TocLink } from '../TocLink';
 import { useTocContext } from '../context';
 import { useHighlightMode } from '../hooks/useHighlightMode';
+import { type TocPageId } from '../types/ITableOfContents';
 import s from './TocTreeNode.module.scss';
 
 export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
@@ -38,4 +39,5 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
 export interface TocTreeNodeProps {
   highlight?: 'none' | 'primary' | 'secondary';
   id: string;
+  pages?: TocPageId[];
 }
