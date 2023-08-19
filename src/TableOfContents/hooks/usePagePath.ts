@@ -10,18 +10,20 @@ export function usePagePath(activePageId: TocPageId | null, pages: TocPages) {
 
     let chain = [];
 
-    (function traverse(pageId: TocPageId, pages: TocPages) {
+    (function traverse(pageId: TocPageId) {
       if (!pages[pageId]) return;
-      chain.push(pageId);
-      if (pages[pageId].parentId) {
-        traverse(pages[pageId].parentId, pages);
+
+      if (pages[pageId].pages?.length) {
+        chain.unshift(pageId);
       }
-    })(activePageId, pages);
+
+      if (pages[pageId].parentId) {
+        traverse(pages[pageId].parentId);
+      }
+    })(activePageId);
 
     setPath(chain);
   }, [activePageId, pages]);
-
-  console.log('PATH', path);
 
   return path;
 }
