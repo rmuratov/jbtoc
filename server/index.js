@@ -4,7 +4,7 @@ const fs = require('fs');
 const host = 'localhost';
 const port = 3001;
 
-const HelpTOC = fs.readFileSync(`${__dirname}/HelpTOC.json`).toString();
+const HelpToc = fs.readFileSync(`${__dirname}/HelpTOC.json`).toString();
 
 const requestListener = function (req, res) {
   res.setHeader('Content-Type', 'application/json');
@@ -12,7 +12,7 @@ const requestListener = function (req, res) {
 
   res.writeHead(200);
 
-  res.end(HelpTOC);
+  res.end(HelpToc);
 };
 
 const server = http.createServer(requestListener);

@@ -11,13 +11,31 @@
   font-size: 13px;
   color: #19191c;
 
+  transition: background-color 0.1s ease;
+
   &:hover {
-    background: #f4f4f4;
+    background-color: #f4f4f4;
+  }
+
+  &.highlightedPrimary:not(.selected) {
+    background-color: #e8e8e8;
+
+    &:hover {
+      background-color: #d1d1d2;
+    }
+  }
+
+  &.highlightedSecondary:not(.selected) {
+    background-color: #f4f4f4;
+
+    &:hover {
+      background-color: #e8e8e8;
+    }
   }
 
   &.selected {
     color: #ffffff;
-    background: #6b57ff;
+    background-color: #6b57ff;
   }
 }
 

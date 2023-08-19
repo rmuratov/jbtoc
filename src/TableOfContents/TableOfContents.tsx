@@ -1,23 +1,23 @@
 import { type FC } from 'react';
 
-import { TocContextProvider } from '../lib/TocContext';
-import { type ITableOfContents } from '../types/ITableOfContents';
 import s from './TableOfContents.module.scss';
-import { TocTree } from './TocTree/TocTree';
+import { TocTreeNodeList } from './TocTreeNodeList/TocTreeNodeList';
+import { TocContextProvider } from './context';
+import { type ITableOfContents } from './types/ITableOfContents';
 
 export const TableOfContents: FC<TableOfContentsProps> = ({ data, isLoading, theme = 'light' }) => {
   return (
-    <TocContextProvider data={data}>
-      <nav className={s.container}>
-        <ul className={s.ul}>
-          {isLoading
-            ? 'LOADING'
-            : data?.topLevelIds.map(id => (
-                <TocTree id={id} key={id} pages={data?.entities.pages} />
-              ))}
-        </ul>
-      </nav>
-    </TocContextProvider>
+    <nav className={s.container}>
+      {isLoading ? (
+        'LOADING'
+      ) : data ? (
+        <TocContextProvider data={data}>
+          <ul className={s.ul}>
+            <TocTreeNodeList topLevelIds={data.topLevelIds} />
+          </ul>
+        </TocContextProvider>
+      ) : null}
+    </nav>
   );
 };
 

@@ -4,7 +4,7 @@ export interface ITableOfContents {
 }
 
 export interface TocEntities {
-  pages: Record<TocPageId, TocPage>;
+  pages: TocPages;
 }
 
 export interface TocPage {
@@ -16,5 +16,7 @@ export interface TocPage {
   title: string;
   url?: string;
 }
+
+export type TocPages = Record<TocPageId, TocPage>;
 
 export type TocPageId = string;

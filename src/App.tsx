@@ -1,9 +1,9 @@
 import s from './App.module.scss';
 import { TableOfContents } from './TableOfContents';
-import { useFetchTOCData } from './lib/useFetchTOCData';
+import { useFetchTocData } from './TableOfContents/hooks';
 
 function App() {
-  const { data, state } = useFetchTOCData();
+  const { data, state } = useFetchTocData();
 
   return (
     <div className={s.app}>

@@ -1,19 +1,27 @@
 import cx from 'clsx';
-import { FC } from 'react';
+import { type FC } from 'react';
 
-import { Icon } from '../../Icon';
-import { useTocContext } from '../../lib/TocContext';
-import { TocPage } from '../../types/ITableOfContents';
+import { Icon } from '../IconExpand';
+import { useTocContext } from '../context';
+import { type TocPage } from '../types/ITableOfContents';
 import s from './TocLink.module.scss';
 
-export const TocLink: FC<TocLinkProps> = ({ isExpanded, page }) => {
-  const { selectedPage } = useTocContext();
+export const TocLink: FC<TocLinkProps> = ({ highlight, isExpanded, page }) => {
+  const { activePageId } = useTocContext();
 
-  const isSelected = selectedPage === page.id;
+  const isSelected = activePageId === page.id;
+
+  let isHighlightedPrimary = highlight === 'primary';
+  let isHighlightedSecondary = highlight === 'secondary';
 
   return (
     <a
-      className={cx(s.link, isSelected && s.selected)}
+      className={cx(
+        s.link,
+        isHighlightedPrimary && s.highlightedPrimary,
+        isHighlightedSecondary && s.highlightedSecondary,
+        isSelected && s.selected,
+      )}
       href={page.url}
       // TODO
       // @ts-ignore
@@ -26,6 +34,7 @@ export const TocLink: FC<TocLinkProps> = ({ isExpanded, page }) => {
 };
 
 export interface TocLinkProps {
+  highlight?: 'none' | 'primary' | 'secondary';
   isExpanded?: boolean;
   page: TocPage;
 }

@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 
 import { ITableOfContents } from '../types/ITableOfContents';
 
-export function useFetchTOCData() {
+export function useFetchTocData() {
   const [data, setData] = useState<ITableOfContents>();
-  const [state, setState] = useState<FetchTOCDataState>('default');
+  const [state, setState] = useState<FetchTocDataState>('default');
   const [error, setError] = useState<Error>();
 
   useEffect(() => {
@@ -24,4 +24,4 @@ export function useFetchTOCData() {
   return { data, error, state };
 }
 
-export type FetchTOCDataState = 'default' | 'error' | 'loaded' | 'loading';
+export type FetchTocDataState = 'default' | 'error' | 'loaded' | 'loading';
