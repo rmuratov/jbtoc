@@ -2,11 +2,14 @@ import { FC, MouseEventHandler, useState } from 'react';
 
 import { TocLink } from '../TocLink';
 import { useTocContext } from '../context';
+import { useHighlightMode } from '../hooks/useHighlightMode';
 import s from './TocTreeNode.module.scss';
 
 export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const { pagePath, pages, setActivePageId } = useTocContext();
+  const { pages, setActivePageId } = useTocContext();
+
+  const h = useHighlightMode(id, highlight);
 
   const page = pages[id];
 
@@ -16,20 +19,12 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
     setIsExpanded(isExpanded => !isExpanded);
   };
 
-  const isLastNode = page.id === pagePath.at(-1);
-
-  let hlight = highlight;
-
-  if (highlight !== 'none' && page.level > 0 && isLastNode) {
-    hlight = 'primary';
-  }
-
   return (
     <>
       <li className={s.listItem} onClick={handleClick}>
-        <TocLink highlight={hlight} isExpanded={isExpanded} page={page} />
+        <TocLink highlight={h} isExpanded={isExpanded} page={page} />
       </li>
-      {isExpanded && page.pages?.map(p => <TocTreeNode highlight={hlight} id={p} key={p} />)}
+      {isExpanded && page.pages?.map(p => <TocTreeNode highlight={h} id={p} key={p} />)}
     </>
   );
 };
