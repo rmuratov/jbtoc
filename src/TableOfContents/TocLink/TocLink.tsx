@@ -1,13 +1,19 @@
+import cx from 'clsx';
 import { FC } from 'react';
 
 import { Icon } from '../../Icon';
+import { useTocContext } from '../../lib/TocContext';
 import { TocPage } from '../../types/ITableOfContents';
 import s from './TocLink.module.scss';
 
 export const TocLink: FC<TocLinkProps> = ({ isExpanded, page }) => {
+  const { selectedPage } = useTocContext();
+
+  const isSelected = selectedPage === page.id;
+
   return (
     <a
-      className={s.link}
+      className={cx(s.link, isSelected && s.selected)}
       href={page.url}
       // TODO
       // @ts-ignore
@@ -20,6 +26,6 @@ export const TocLink: FC<TocLinkProps> = ({ isExpanded, page }) => {
 };
 
 export interface TocLinkProps {
-  isExpanded: boolean;
+  isExpanded?: boolean;
   page: TocPage;
 }

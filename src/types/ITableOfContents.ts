@@ -8,13 +8,13 @@ export interface TocEntities {
 }
 
 export interface TocPage {
-  doNotShowWarningLink: boolean;
+  doNotShowWarningLink?: boolean;
   id: TocPageId;
   level: number;
   pages?: TocPageId[];
   parentId: string;
   title: string;
-  url: string;
+  url?: string;
 }
 
 export type TocPageId = string;
