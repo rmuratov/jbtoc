@@ -2,9 +2,9 @@ import type { FC, PropsWithChildren } from 'react';
 
 import cx from 'clsx';
 
-import s from './Link.module.scss';
+import s from './ListItem.module.scss';
 
-export const Link: FC<PropsWithChildren<LinkProps>> = ({
+export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
   children,
   highlight,
   href,
@@ -17,7 +17,7 @@ export const Link: FC<PropsWithChildren<LinkProps>> = ({
   return (
     <a
       className={cx(
-        s.link,
+        s.listItem,
         primary && s.highlightPrimary,
         secondary && s.highlightSecondary,
         isSelected && s.selected,
@@ -32,7 +32,7 @@ export const Link: FC<PropsWithChildren<LinkProps>> = ({
   );
 };
 
-export interface LinkProps {
+export interface ListItemProps {
   highlight: 'none' | 'primary' | 'secondary';
   href?: string;
   isSelected: boolean;

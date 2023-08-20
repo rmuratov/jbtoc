@@ -2,7 +2,7 @@ import { MouseEventHandler, useCallback, useMemo, useState } from 'react';
 
 import type { TocPageId } from '../types/ITableOfContents';
 
-import { useTocContext } from '../context';
+import { useTocContext } from '../hooks';
 
 export function useExpandHandlers(id: TocPageId) {
   const [isExpanded, setIsExpanded] = useState(false);

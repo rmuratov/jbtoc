@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 import { TocTreeNode } from '../TocTreeNode/TocTreeNode';
-import { useTocContext } from '../context';
+import { useTocContext } from '../hooks';
 
 export const TocTreeNodeList: FC = () => {
   const { topLevelIds } = useTocContext();

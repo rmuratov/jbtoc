@@ -1,6 +1,6 @@
 import type { TocPageId } from '../types/ITableOfContents';
 
-import { useTocContext } from '../context';
+import { useTocContext } from '../hooks';
 
 export function useHighlightMode(pageId: TocPageId, prev?: 'none' | 'primary' | 'secondary') {
   const { pagePath, pages } = useTocContext();

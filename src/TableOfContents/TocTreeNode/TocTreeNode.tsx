@@ -2,11 +2,11 @@ import type { FC } from 'react';
 
 import type { TocPageId } from '../types/ITableOfContents';
 
-import { ButtonExpand, Link, ListItemContainer } from '../components';
-import { useTocContext } from '../context';
-import { useHighlightMode } from '../hooks';
+import { ButtonExpand, ListItem, ListItemContainer } from '../components';
+import { useTocContext } from '../hooks';
 import s from './TocTreeNode.module.scss';
 import { useExpandHandlers } from './useExpandHandlers';
+import { useHighlightMode } from './useHighlightMode';
 
 export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
   const { activePageId, pages } = useTocContext();
@@ -18,7 +18,7 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
   return (
     <>
       <ListItemContainer onClick={handleItemClick}>
-        <Link
+        <ListItem
           highlight={highlightMode}
           href={page.url}
           isSelected={activePageId === id}
@@ -32,7 +32,7 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
             />
           )}
           {page.title}
-        </Link>
+        </ListItem>
       </ListItemContainer>
 
       {isExpanded && page.pages?.map(p => <TocTreeNode highlight={highlightMode} id={p} key={p} />)}
