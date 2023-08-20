@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { TocPageId, TocPages } from '../types/ITableOfContents';
+import type { TocPageId, TocPages } from '../types/ITableOfContents';
 
 export function usePagePath(activePageId: TocPageId | null, pages: TocPages) {
   const [path, setPath] = useState<TocPageId[]>([]);

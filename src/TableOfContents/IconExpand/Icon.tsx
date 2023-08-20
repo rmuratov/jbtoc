@@ -1,5 +1,6 @@
+import type { FC } from 'react';
+
 import cx from 'clsx';
-import { FC } from 'react';
 
 import s from './Icon.module.scss';
 

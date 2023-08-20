@@ -1,9 +1,11 @@
+import type { FC } from 'react';
+
 import cx from 'clsx';
-import { type FC } from 'react';
+
+import type { TocPage } from '../types/ITableOfContents';
 
 import { Icon } from '../IconExpand';
 import { useTocContext } from '../context';
-import { type TocPage } from '../types/ITableOfContents';
 import s from './TocLink.module.scss';
 
 export const TocLink: FC<TocLinkProps> = ({ highlight, isExpanded, page }) => {

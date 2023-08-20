@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { ITableOfContents } from '../types/ITableOfContents';
+import type { ITableOfContents } from '../types/ITableOfContents';
 
 export function useFetchTocData() {
   const [data, setData] = useState<ITableOfContents>();

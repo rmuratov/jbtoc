@@ -8,8 +8,9 @@ import {
   useState,
 } from 'react';
 
+import type { ITableOfContents, TocPage, TocPageId } from '../types/ITableOfContents';
+
 import { usePagePath } from '../hooks';
-import { ITableOfContents, TocPage, TocPageId } from '../types/ITableOfContents';
 
 const TocContext = createContext<ITocContext | undefined>(undefined);
 

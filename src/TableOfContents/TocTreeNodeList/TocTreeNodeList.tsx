@@ -1,7 +1,8 @@
-import { FC } from 'react';
+import type { FC } from 'react';
+
+import type { TocPageId } from '../types/ITableOfContents';
 
 import { TocTreeNode } from '../TocTreeNode/TocTreeNode';
-import { TocPageId } from '../types/ITableOfContents';
 
 export const TocTreeNodeList: FC<TocTreeNodeListProps> = ({ topLevelIds }) => {
   return topLevelIds.map(id => <TocTreeNode id={id} key={id} />);
