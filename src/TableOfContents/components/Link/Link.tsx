@@ -1,11 +1,10 @@
-import type { FC, PropsWithChildren, ReactNode } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 
 import cx from 'clsx';
 
 import s from './Link.module.scss';
 
 export const Link: FC<PropsWithChildren<LinkProps>> = ({
-  before,
   children,
   highlight,
   href,
@@ -28,14 +27,12 @@ export const Link: FC<PropsWithChildren<LinkProps>> = ({
       // @ts-ignore
       style={{ '--toc-item-left-offset': `${level * 16 + 16}px` }}
     >
-      {before}
       {children}
     </a>
   );
 };
 
 export interface LinkProps {
-  before: ReactNode;
   highlight: 'none' | 'primary' | 'secondary';
   href?: string;
   isSelected: boolean;
