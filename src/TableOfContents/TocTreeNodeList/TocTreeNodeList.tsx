@@ -1,13 +1,9 @@
 import type { FC } from 'react';
 
-import type { TocPageId } from '../types/ITableOfContents';
-
 import { TocTreeNode } from '../TocTreeNode/TocTreeNode';
+import { useTocContext } from '../context';
 
-export const TocTreeNodeList: FC<TocTreeNodeListProps> = ({ topLevelIds }) => {
+export const TocTreeNodeList: FC = () => {
+  const { topLevelIds } = useTocContext();
   return topLevelIds.map(id => <TocTreeNode id={id} key={id} />);
 };
-
-export interface TocTreeNodeListProps {
-  topLevelIds: TocPageId[];
-}

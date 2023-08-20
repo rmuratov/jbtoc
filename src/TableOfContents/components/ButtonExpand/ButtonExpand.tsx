@@ -2,9 +2,9 @@ import type { FC } from 'react';
 
 import cx from 'clsx';
 
-import s from './Icon.module.scss';
+import s from './ButtonExpand.module.scss';
 
-export const Icon: FC<IconProps> = ({ className, isExpanded }) => {
+export const ButtonExpand: FC<ButtonExpandProps> = ({ className, isExpanded }) => {
   return (
     <svg
       className={cx(s.icon, isExpanded && s.expanded, className)}
@@ -18,7 +18,7 @@ export const Icon: FC<IconProps> = ({ className, isExpanded }) => {
   );
 };
 
-export interface IconProps {
+export interface ButtonExpandProps {
   className?: string;
   isExpanded?: boolean;
 }

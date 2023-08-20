@@ -10,6 +10,7 @@ export function usePagePath(activePageId: TocPageId | null, pages: TocPages) {
 
     let chain = [];
 
+    // TODO: remove unshift and recursion
     (function traverse(pageId: TocPageId) {
       if (!pages[pageId]) return;
 

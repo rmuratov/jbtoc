@@ -17,7 +17,7 @@
     background-color: #f4f4f4;
   }
 
-  &.highlightedPrimary:not(.selected) {
+  &.highlightPrimary:not(.selected) {
     background-color: #e8e8e8;
 
     &:hover {
@@ -25,7 +25,7 @@
     }
   }
 
-  &.highlightedSecondary:not(.selected) {
+  &.highlightSecondary:not(.selected) {
     background-color: #f4f4f4;
 
     &:hover {
@@ -37,10 +37,4 @@
     color: #ffffff;
     background-color: #6b57ff;
   }
-}
-
-.icon {
-  position: absolute;
-  top: 25%;
-  margin-left: -20px;
 }

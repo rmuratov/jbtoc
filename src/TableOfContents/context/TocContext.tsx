@@ -5,6 +5,7 @@ import {
   type SetStateAction,
   createContext,
   useContext,
+  useMemo,
   useState,
 } from 'react';
 
@@ -19,15 +20,17 @@ export const TocContextProvider: FC<PropsWithChildren<TocContextProviderProps>> 
   data,
 }) => {
   const pages = data.entities.pages;
+  const topLevelIds = data.topLevelIds;
 
   const [activePageId, setActivePageId] = useState<TocPageId | null>(null);
   const pagePath = usePagePath(activePageId, pages);
 
-  return (
-    <TocContext.Provider value={{ activePageId, pagePath, pages, setActivePageId }}>
-      {children}
-    </TocContext.Provider>
+  const value = useMemo(
+    () => ({ activePageId, pagePath, pages, setActivePageId, topLevelIds }),
+    [activePageId, pagePath, pages, topLevelIds],
   );
+
+  return <TocContext.Provider value={value}>{children}</TocContext.Provider>;
 };
 
 export function useTocContext() {
@@ -45,6 +48,7 @@ export interface ITocContext {
   pagePath: TocPageId[];
   pages: Record<string, TocPage>;
   setActivePageId: Dispatch<SetStateAction<TocPageId | null>>;
+  topLevelIds: TocPageId[];
 }
 
 export interface TocContextProviderProps {
