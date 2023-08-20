@@ -1,4 +1,4 @@
-import type { FC, PropsWithChildren } from 'react';
+import type { CSSProperties, FC, PropsWithChildren } from 'react';
 
 import cx from 'clsx';
 
@@ -14,6 +14,8 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
   const primary = highlight === 'primary';
   const secondary = highlight === 'secondary';
 
+  const style = { '--level': level } as CSSProperties;
+
   return (
     <a
       className={cx(
@@ -23,9 +25,7 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
         isSelected && s.selected,
       )}
       href={href}
-      // TODO
-      // @ts-ignore
-      style={{ '--item-left-offset': `${level * 16 + 16}px` }}
+      style={style}
     >
       {children}
     </a>

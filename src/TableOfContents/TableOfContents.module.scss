@@ -2,8 +2,10 @@
   --container-padding-top: 24px;
   --container-padding-horizontal: 24px;
   --container-border-color: rgba(25, 25, 28, 0.2);
+  --container-bg-color: var(--color-white);
 
   --item-padding-vertical: 8px;
+  --item-level-offset: 16px;
 
   /* Default item colors */
   --item-text-color: var(--color-black);
@@ -23,6 +25,8 @@
   --item-highlighted-2-bg-color-hover: var(--color-gray-1);
 
   &.dark {
+    --container-bg-color: var(--color-black);
+
     /* Default item colors */
     --item-text-color: var(--color-white);
     --item-bg-color: var(--color-black);

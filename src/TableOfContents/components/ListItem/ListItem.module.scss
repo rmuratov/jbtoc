@@ -3,7 +3,7 @@
   position: relative;
   padding-top: var(--item-padding-vertical);
   padding-bottom: var(--item-padding-vertical);
-  padding-left: var(--item-left-offset);
+  padding-left: calc(var(--level) * var(--item-level-offset) + var(--item-level-offset));
   border-left: 32px solid transparent;
   border-right: 32px solid transparent;
   text-decoration: none;
