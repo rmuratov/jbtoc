@@ -1,0 +1,54 @@
+.tableOfContents {
+  --container-padding-top: 24px;
+  --container-padding-horizontal: 24px;
+  --container-border-color: rgba(25, 25, 28, 0.2);
+
+  --item-padding-vertical: 8px;
+
+  /* Default item colors */
+  --item-text-color: var(--color-black);
+  --item-bg-color: var(--color-white);
+  --item-bg-color-hover: var(--color-gray-0);
+
+  /* Selected item color */
+  --item-selected-text-color: var(--color-white);
+  --item-selected-bg-color: var(--color-violet-0);
+
+  /* Highlighted primary item color */
+  --item-highlighted-1-bg-color: var(--color-gray-1);
+  --item-highlighted-1-bg-color-hover: var(--color-gray-2);
+
+  /* Highlighted secondary item color */
+  --item-highlighted-2-bg-color: var(--color-gray-0);
+  --item-highlighted-2-bg-color-hover: var(--color-gray-1);
+
+  &.dark {
+    /* Default item colors */
+    --item-text-color: var(--color-white);
+    --item-bg-color: var(--color-black);
+    --item-bg-color-hover: var(--color-gray-5);
+
+    /* Selected item color */
+    --item-selected-text-color: var(--color-white);
+    --item-selected-bg-color: var(--color-violet-1);
+
+    /* Highlighted primary item color */
+    --item-highlighted-1-bg-color: var(--color-gray-4);
+    --item-highlighted-1-bg-color-hover: var(--color-gray-3);
+
+    /* Highlighted secondary item color */
+    --item-highlighted-2-bg-color: var(--color-gray-5);
+    --item-highlighted-2-bg-color-hover: var(--color-gray-4);
+  }
+
+  --color-white: #ffffff;
+  --color-violet-0: #6b57ff;
+  --color-violet-1: #7b61ff;
+  --color-gray-0: #f4f4f4;
+  --color-gray-1: #e8e8e8;
+  --color-gray-2: #d1d1d2;
+  --color-gray-3: #474749;
+  --color-gray-4: #303033;
+  --color-gray-5: #252527;
+  --color-black: #19191c;
+}

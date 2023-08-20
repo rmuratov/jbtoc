@@ -4,7 +4,6 @@ import type { TocPageId } from '../types/ITableOfContents';
 
 import { ButtonExpand, ListItem, ListItemContainer } from '../components';
 import { useTocContext } from '../hooks';
-import s from './TocTreeNode.module.scss';
 import { useExpandHandlers } from './useExpandHandlers';
 import { useHighlightMode } from './useHighlightMode';
 
@@ -25,11 +24,7 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
           level={page.level}
         >
           {page.pages?.length && (
-            <ButtonExpand
-              className={s.icon}
-              isExpanded={isExpanded}
-              onClick={handleButtonExpandClick}
-            />
+            <ButtonExpand isExpanded={isExpanded} onClick={handleButtonExpandClick} />
           )}
           {page.title}
         </ListItem>

@@ -25,7 +25,7 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
       href={href}
       // TODO
       // @ts-ignore
-      style={{ '--toc-item-left-offset': `${level * 16 + 16}px` }}
+      style={{ '--item-left-offset': `${level * 16 + 16}px` }}
     >
       {children}
     </a>

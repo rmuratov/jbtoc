@@ -4,4 +4,9 @@
   &.expanded {
     transform: rotate(90deg);
   }
+
+  // TODO: pass as prop
+  position: absolute;
+  top: 25%;
+  margin-left: -20px;
 }

@@ -1,14 +1,17 @@
 import type { FC } from 'react';
 
+import cx from 'clsx';
+
 import type { ITableOfContents } from './types/ITableOfContents';
 
+import s from './TableOfContents.module.scss';
 import { TocTreeNodeList } from './TocTreeNodeList';
 import { Container, List } from './components';
 import { TocContextProvider } from './context';
 
 export const TableOfContents: FC<TableOfContentsProps> = ({ data, isLoading, theme = 'light' }) => {
   return (
-    <Container>
+    <Container className={cx(s.tableOfContents, theme === 'dark' && s.dark)}>
       {isLoading ? (
         'LOADING'
       ) : !data ? null : (

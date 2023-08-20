@@ -1,40 +1,42 @@
 .listItem {
   display: block;
   position: relative;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: var(--toc-item-left-offset);
+  padding-top: var(--item-padding-vertical);
+  padding-bottom: var(--item-padding-vertical);
+  padding-left: var(--item-left-offset);
   border-left: 32px solid transparent;
   border-right: 32px solid transparent;
   text-decoration: none;
   cursor: pointer;
   font-size: 13px;
-  color: #19191c;
 
   transition: background-color 0.1s ease;
 
+  color: var(--item-text-color);
+  background-color: var(--item-bg-color);
+
   &:hover {
-    background-color: #f4f4f4;
+    background-color: var(--item-bg-color-hover);
   }
 
   &.highlightPrimary:not(.selected) {
-    background-color: #e8e8e8;
+    background-color: var(--item-highlighted-1-bg-color);
 
     &:hover {
-      background-color: #d1d1d2;
+      background-color: var(--item-highlighted-1-bg-color-hover);
     }
   }
 
   &.highlightSecondary:not(.selected) {
-    background-color: #f4f4f4;
+    background-color: var(--item-highlighted-2-bg-color);
 
     &:hover {
-      background-color: #e8e8e8;
+      background-color: var(--item-highlighted-2-bg-color-hover);
     }
   }
 
   &.selected {
-    color: #ffffff;
-    background-color: #6b57ff;
+    color: var(--item-selected-text-color);
+    background-color: var(--item-selected-bg-color);
   }
 }
