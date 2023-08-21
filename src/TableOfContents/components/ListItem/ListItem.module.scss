@@ -4,16 +4,15 @@
   padding-top: var(--item-padding-vertical);
   padding-bottom: var(--item-padding-vertical);
   padding-left: calc(var(--level) * var(--item-level-offset) + var(--item-level-offset));
-  border-left: 32px solid transparent;
-  border-right: 32px solid transparent;
+  border-left: var(--container-padding-horizontal) solid transparent;
+  border-right: var(--container-padding-horizontal) solid transparent;
   text-decoration: none;
   cursor: pointer;
-  font-size: 13px;
+  font-size: var(--item-font-size);
 
   transition: background-color 0.1s ease;
 
   color: var(--item-text-color);
-  background-color: var(--item-bg-color);
 
   &:hover {
     background-color: var(--item-bg-color-hover);

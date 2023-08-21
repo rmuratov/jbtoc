@@ -1,11 +1,13 @@
 .tableOfContents {
-  --container-padding-top: 24px;
-  --container-padding-horizontal: 24px;
+  --container-padding-vertical: 24px;
+  --container-padding-horizontal: 32px;
   --container-border-color: rgba(25, 25, 28, 0.2);
   --container-bg-color: var(--color-white);
+  --container-width: 300px;
 
   --item-padding-vertical: 8px;
   --item-level-offset: 16px;
+  --item-font-size: 13px;
 
   /* Default item colors */
   --item-text-color: var(--color-black);
@@ -23,6 +25,8 @@
   /* Highlighted secondary item color */
   --item-highlighted-2-bg-color: var(--color-gray-0);
   --item-highlighted-2-bg-color-hover: var(--color-gray-1);
+
+  --preloader-item-color: var(--color-gray-0);
 
   &.dark {
     --container-bg-color: var(--color-black);
@@ -43,6 +47,8 @@
     /* Highlighted secondary item color */
     --item-highlighted-2-bg-color: var(--color-gray-5);
     --item-highlighted-2-bg-color-hover: var(--color-gray-4);
+
+    --preloader-item-color: var(--color-gray-3);
   }
 
   --color-white: #ffffff;

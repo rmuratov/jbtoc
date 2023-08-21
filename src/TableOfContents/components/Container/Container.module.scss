@@ -1,7 +1,8 @@
 .container {
-  height: 100%;
+  width: var(--container-width);
+  box-sizing: border-box;
   overflow-y: auto;
-  padding-top: var(--container-padding-top);
+  padding-top: var(--container-padding-vertical);
   border: 1px solid var(--container-border-color);
 
   background-color: var(--container-bg-color);

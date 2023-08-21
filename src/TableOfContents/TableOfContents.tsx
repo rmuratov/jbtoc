@@ -6,14 +6,14 @@ import type { ITableOfContents } from './types/ITableOfContents';
 
 import s from './TableOfContents.module.scss';
 import { TocTreeNodeList } from './TocTreeNodeList';
-import { Container, List } from './components';
+import { Container, List, Preloader } from './components';
 import { TocContextProvider } from './context';
 
 export const TableOfContents: FC<TableOfContentsProps> = ({ data, isLoading, theme = 'light' }) => {
   return (
     <Container className={cx(s.tableOfContents, theme === 'dark' && s.dark)}>
       {isLoading ? (
-        'LOADING'
+        <Preloader />
       ) : !data ? null : (
         <TocContextProvider data={data}>
           <List>
