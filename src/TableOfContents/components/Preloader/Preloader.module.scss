@@ -1,14 +1,23 @@
 .preloader {
   padding-left: var(--container-padding-horizontal);
   padding-right: var(--container-padding-horizontal);
-}
+  padding-top: var(--item-padding-vertical);
 
-.item {
-  width: 100%;
-  height: 20px;
-  background-color: var(--preloader-item-color);
+  display: flex;
+  flex-direction: column;
 
-  &:not(:first-child) {
-    margin-top: 16px;
+  .item {
+    height: var(--item-line-height);
+    background-color: var(--preloader-item-color);
+
+    margin-bottom: calc(var(--item-padding-vertical) * 2);
+
+    &.medium {
+      width: 80%;
+    }
+
+    &.small {
+      width: 50%;
+    }
   }
 }

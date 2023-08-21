@@ -8,6 +8,7 @@
   --item-padding-vertical: 8px;
   --item-level-offset: 16px;
   --item-font-size: 13px;
+  --item-line-height: 20px;
 
   /* Default item colors */
   --item-text-color: var(--color-black);
@@ -26,7 +27,7 @@
   --item-highlighted-2-bg-color: var(--color-gray-0);
   --item-highlighted-2-bg-color-hover: var(--color-gray-1);
 
-  --preloader-item-color: var(--color-gray-0);
+  --preloader-item-color: var(--color-gray-1);
 
   &.dark {
     --container-bg-color: var(--color-black);

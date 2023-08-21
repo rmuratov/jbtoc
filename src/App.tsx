@@ -16,13 +16,12 @@ function App() {
 
       <main>
         <h1>JB TOC</h1>
+
         <button onClick={() => setTheme(theme => (theme === 'light' ? 'dark' : 'light'))}>
           Toggle theme
         </button>
 
-        <button onClick={() => setIsLoading(isLoading => !isLoading)}>
-          Toggle force loading state
-        </button>
+        <button onClick={() => setIsLoading(isLoading => !isLoading)}>Toggle loading state</button>
       </main>
     </div>
   );
