@@ -1,6 +1,15 @@
 {
   "entities": {
     "pages": {
+      "Test_Test_Test": {
+        "id": "Test_Test_Test",
+        "title": "Test Test Test",
+        "url": "test-test-test.html",
+        "parentId": "ij",
+        "level": 0,
+        "tabIndex": 0,
+        "doNotShowWarningLink": true
+      },
       "Getting_started": {
         "id": "Getting_started",
         "title": "Getting started",
@@ -39,7 +48,11 @@
         "level": 1,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["Guided_Tour_Around_the_User_Interface", "Pro_Tips", "Getting_Help"]
+        "pages": [
+          "Guided_Tour_Around_the_User_Interface",
+          "Pro_Tips",
+          "Getting_Help"
+        ]
       },
       "Guided_Tour_Around_the_User_Interface": {
         "id": "Guided_Tour_Around_the_User_Interface",
@@ -76,7 +89,12 @@
         "level": 1,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["Run_for_the_first_time", "Register", "Update", "Uninstall"]
+        "pages": [
+          "Run_for_the_first_time",
+          "Register",
+          "Update",
+          "Uninstall"
+        ]
       },
       "Run_for_the_first_time": {
         "id": "Run_for_the_first_time",
@@ -616,7 +634,9 @@
         "level": 2,
         "tabIndex": 7,
         "doNotShowWarningLink": true,
-        "pages": ["File_Nesting_Dialog"]
+        "pages": [
+          "File_Nesting_Dialog"
+        ]
       },
       "File_Nesting_Dialog": {
         "id": "File_Nesting_Dialog",
@@ -635,7 +655,9 @@
         "level": 1,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["Shared_indexes"]
+        "pages": [
+          "Shared_indexes"
+        ]
       },
       "Shared_indexes": {
         "id": "Shared_indexes",
@@ -715,7 +737,9 @@
         "level": 1,
         "tabIndex": 4,
         "doNotShowWarningLink": true,
-        "pages": ["Supported_Java_versions"]
+        "pages": [
+          "Supported_Java_versions"
+        ]
       },
       "Supported_Java_versions": {
         "id": "Supported_Java_versions",
@@ -743,7 +767,9 @@
         "level": 1,
         "tabIndex": 6,
         "doNotShowWarningLink": true,
-        "pages": ["Scope_Language_Syntax_Reference"]
+        "pages": [
+          "Scope_Language_Syntax_Reference"
+        ]
       },
       "Scope_Language_Syntax_Reference": {
         "id": "Scope_Language_Syntax_Reference",
@@ -1005,7 +1031,10 @@
         "level": 2,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["Regular_Expression_Syntax_Reference", "Regex_search_and_replace_inspections"]
+        "pages": [
+          "Regular_Expression_Syntax_Reference",
+          "Regex_search_and_replace_inspections"
+        ]
       },
       "Regular_Expression_Syntax_Reference": {
         "id": "Regular_Expression_Syntax_Reference",
@@ -1221,7 +1250,10 @@
         "level": 2,
         "tabIndex": 0,
         "doNotShowWarningLink": true,
-        "pages": ["Change_Class_Signature_Dialog", "Change_signature_for_Scala"]
+        "pages": [
+          "Change_Class_Signature_Dialog",
+          "Change_signature_for_Scala"
+        ]
       },
       "Change_Class_Signature_Dialog": {
         "id": "Change_Class_Signature_Dialog",
@@ -1394,7 +1426,9 @@
         "level": 2,
         "tabIndex": 6,
         "doNotShowWarningLink": true,
-        "pages": ["Inline_Dialogs"]
+        "pages": [
+          "Inline_Dialogs"
+        ]
       },
       "Inline_Dialogs": {
         "id": "Inline_Dialogs",
@@ -1449,7 +1483,10 @@
         "level": 2,
         "tabIndex": 11,
         "doNotShowWarningLink": true,
-        "pages": ["Pull_Members_Up_Dialog", "Push_Members_Down_Dialog"]
+        "pages": [
+          "Pull_Members_Up_Dialog",
+          "Push_Members_Down_Dialog"
+        ]
       },
       "Pull_Members_Up_Dialog": {
         "id": "Pull_Members_Up_Dialog",
@@ -1529,7 +1566,11 @@
         "parentId": "Refactoring_Source_Code",
         "level": 2,
         "tabIndex": 18,
-        "pages": ["Remove_Middleman", "Wrap_Return_Value", "Generify_Refactoring"]
+        "pages": [
+          "Remove_Middleman",
+          "Wrap_Return_Value",
+          "Generify_Refactoring"
+        ]
       },
       "Remove_Middleman": {
         "id": "Remove_Middleman",
@@ -1564,7 +1605,10 @@
         "parentId": "Refactoring_Source_Code",
         "level": 2,
         "tabIndex": 19,
-        "pages": ["replace_constructor_with_builder", "Replace_Constructor_with_Factory_Method"]
+        "pages": [
+          "replace_constructor_with_builder",
+          "Replace_Constructor_with_Factory_Method"
+        ]
       },
       "replace_constructor_with_builder": {
         "id": "replace_constructor_with_builder",
@@ -1601,7 +1645,10 @@
         "level": 1,
         "tabIndex": 11,
         "doNotShowWarningLink": true,
-        "pages": ["Viewing_Definition", "Inlay_Hints"]
+        "pages": [
+          "Viewing_Definition",
+          "Inlay_Hints"
+        ]
       },
       "Viewing_Definition": {
         "id": "Viewing_Definition",
@@ -1719,7 +1766,10 @@
         "parentId": "Code_Inspection",
         "level": 2,
         "tabIndex": 8,
-        "pages": ["List_of_Java_inspections", "Analyzing_Duplicates"]
+        "pages": [
+          "List_of_Java_inspections",
+          "Analyzing_Duplicates"
+        ]
       },
       "List_of_Java_inspections": {
         "id": "List_of_Java_inspections",
@@ -1756,7 +1806,11 @@
         "level": 1,
         "tabIndex": 14,
         "doNotShowWarningLink": true,
-        "pages": ["file_template_variables", "parse_directive", "Templates_with_multiple_files"]
+        "pages": [
+          "file_template_variables",
+          "parse_directive",
+          "Templates_with_multiple_files"
+        ]
       },
       "file_template_variables": {
         "id": "file_template_variables",
@@ -1862,7 +1916,10 @@
         "level": 1,
         "tabIndex": 18,
         "doNotShowWarningLink": true,
-        "pages": ["Spellchecking", "Grammar"]
+        "pages": [
+          "Spellchecking",
+          "Grammar"
+        ]
       },
       "Spellchecking": {
         "id": "Spellchecking",
@@ -1908,7 +1965,9 @@
         "level": 1,
         "tabIndex": 21,
         "doNotShowWarningLink": true,
-        "pages": ["Run_Debug_Configuration_Java_Scratch"]
+        "pages": [
+          "Run_Debug_Configuration_Java_Scratch"
+        ]
       },
       "Run_Debug_Configuration_Java_Scratch": {
         "id": "Run_Debug_Configuration_Java_Scratch",
@@ -1927,7 +1986,9 @@
         "level": 1,
         "tabIndex": 22,
         "doNotShowWarningLink": true,
-        "pages": ["5b1359f8"]
+        "pages": [
+          "5b1359f8"
+        ]
       },
       "5b1359f8": {
         "id": "5b1359f8",
@@ -1935,7 +1996,10 @@
         "parentId": "Class_diagram",
         "level": 2,
         "tabIndex": 0,
-        "pages": ["Diagram_Toolbar_and_Context_Menu", "Class_Diagram_Toolbar_and_Context_Menu"]
+        "pages": [
+          "Diagram_Toolbar_and_Context_Menu",
+          "Class_Diagram_Toolbar_and_Context_Menu"
+        ]
       },
       "Diagram_Toolbar_and_Context_Menu": {
         "id": "Diagram_Toolbar_and_Context_Menu",
@@ -2104,7 +2168,12 @@
         "level": 1,
         "tabIndex": 0,
         "doNotShowWarningLink": true,
-        "pages": ["Maven_Support", "Gradle", "Ant", "Gant"]
+        "pages": [
+          "Maven_Support",
+          "Gradle",
+          "Ant",
+          "Gant"
+        ]
       },
       "Maven_Support": {
         "id": "Maven_Support",
@@ -2501,7 +2570,10 @@
         "level": 2,
         "tabIndex": 3,
         "doNotShowWarningLink": true,
-        "pages": ["Running_Gant_Targets", "Adding_Gant_Scripts"]
+        "pages": [
+          "Running_Gant_Targets",
+          "Adding_Gant_Scripts"
+        ]
       },
       "Running_Gant_Targets": {
         "id": "Running_Gant_Targets",
@@ -2565,7 +2637,9 @@
         "level": 1,
         "tabIndex": 5,
         "doNotShowWarningLink": true,
-        "pages": ["Package_Search_build_system_support_limitations"]
+        "pages": [
+          "Package_Search_build_system_support_limitations"
+        ]
       },
       "Package_Search_build_system_support_limitations": {
         "id": "Package_Search_build_system_support_limitations",
@@ -2631,7 +2705,9 @@
         "level": 1,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["Run_Debug_Configuration_Java_Application"]
+        "pages": [
+          "Run_Debug_Configuration_Java_Application"
+        ]
       },
       "Run_Debug_Configuration_Java_Application": {
         "id": "Run_Debug_Configuration_Java_Application",
@@ -3101,7 +3177,11 @@
         "parentId": "Tests_in_IDE",
         "level": 1,
         "tabIndex": 5,
-        "pages": ["Test_Management_Systems", "TMS_Annotations_Setup", "Local_TMS"]
+        "pages": [
+          "Test_Management_Systems",
+          "TMS_Annotations_Setup",
+          "Local_TMS"
+        ]
       },
       "Test_Management_Systems": {
         "id": "Test_Management_Systems",
@@ -3208,7 +3288,13 @@
         "level": 1,
         "tabIndex": 8,
         "doNotShowWarningLink": true,
-        "pages": ["d5e2a8a", "TestNG", "Cucumber_Support", "Selenium", "Spock"]
+        "pages": [
+          "d5e2a8a",
+          "TestNG",
+          "Cucumber_Support",
+          "Selenium",
+          "Spock"
+        ]
       },
       "d5e2a8a": {
         "id": "d5e2a8a",
@@ -3216,7 +3302,10 @@
         "parentId": "Testing_Frameworks",
         "level": 2,
         "tabIndex": 0,
-        "pages": ["JUnit", "Run_Debug_Configuration_JUnit"]
+        "pages": [
+          "JUnit",
+          "Run_Debug_Configuration_JUnit"
+        ]
       },
       "JUnit": {
         "id": "JUnit",
@@ -3244,7 +3333,9 @@
         "level": 2,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["Run_Debug_Configuration_TestNG"]
+        "pages": [
+          "Run_Debug_Configuration_TestNG"
+        ]
       },
       "Run_Debug_Configuration_TestNG": {
         "id": "Run_Debug_Configuration_TestNG",
@@ -3324,7 +3415,9 @@
         "level": 2,
         "tabIndex": 3,
         "doNotShowWarningLink": true,
-        "pages": ["Selenium_page_objects"]
+        "pages": [
+          "Selenium_page_objects"
+        ]
       },
       "Selenium_page_objects": {
         "id": "Selenium_page_objects",
@@ -3467,7 +3560,10 @@
         "parentId": "65a9ec0a",
         "level": 2,
         "tabIndex": 3,
-        "pages": ["Create_a_memory_snapshot", "Read_the_memory_snapshot"]
+        "pages": [
+          "Create_a_memory_snapshot",
+          "Read_the_memory_snapshot"
+        ]
       },
       "Create_a_memory_snapshot": {
         "id": "Create_a_memory_snapshot",
@@ -3522,7 +3618,10 @@
         "level": 1,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["DSM_Analysis", "Project_module_dependencies_diagram"]
+        "pages": [
+          "DSM_Analysis",
+          "Project_module_dependencies_diagram"
+        ]
       },
       "DSM_Analysis": {
         "id": "DSM_Analysis",
@@ -4303,7 +4402,10 @@
         "level": 2,
         "tabIndex": 19,
         "doNotShowWarningLink": true,
-        "pages": ["Viewing_Differences_in_Properties", "Resolving_Property_Conflicts_SVN"]
+        "pages": [
+          "Viewing_Differences_in_Properties",
+          "Resolving_Property_Conflicts_SVN"
+        ]
       },
       "Viewing_Differences_in_Properties": {
         "id": "Viewing_Differences_in_Properties",
@@ -4553,7 +4655,9 @@
         "level": 3,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["SVN_Checkout_Options_Dialog"]
+        "pages": [
+          "SVN_Checkout_Options_Dialog"
+        ]
       },
       "SVN_Checkout_Options_Dialog": {
         "id": "SVN_Checkout_Options_Dialog",
@@ -4979,7 +5083,11 @@
         "level": 1,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["Getting_started_with_Space", "Review_Code_in_Space", "Space_Automation"]
+        "pages": [
+          "Getting_started_with_Space",
+          "Review_Code_in_Space",
+          "Space_Automation"
+        ]
       },
       "Getting_started_with_Space": {
         "id": "Getting_started_with_Space",
@@ -5098,7 +5206,9 @@
         "level": 4,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["How_to_connect_to_Cassandra_with_SSL"]
+        "pages": [
+          "How_to_connect_to_Cassandra_with_SSL"
+        ]
       },
       "How_to_connect_to_Cassandra_with_SSL": {
         "id": "How_to_connect_to_Cassandra_with_SSL",
@@ -5144,7 +5254,9 @@
         "level": 4,
         "tabIndex": 5,
         "doNotShowWarningLink": true,
-        "pages": ["Connect_to_BigQuery"]
+        "pages": [
+          "Connect_to_BigQuery"
+        ]
       },
       "Connect_to_BigQuery": {
         "id": "Connect_to_BigQuery",
@@ -5244,7 +5356,9 @@
         "level": 4,
         "tabIndex": 15,
         "doNotShowWarningLink": true,
-        "pages": ["DB_Tutorial_Connecting_to_MS_SQL_server"]
+        "pages": [
+          "DB_Tutorial_Connecting_to_MS_SQL_server"
+        ]
       },
       "DB_Tutorial_Connecting_to_MS_SQL_server": {
         "id": "DB_Tutorial_Connecting_to_MS_SQL_server",
@@ -5354,7 +5468,10 @@
         "level": 4,
         "tabIndex": 19,
         "doNotShowWarningLink": true,
-        "pages": ["How_to_connect_to_Oracle_with_OCI", "Connect_to_Oracle_Cloud_by_using_wallets"]
+        "pages": [
+          "How_to_connect_to_Oracle_with_OCI",
+          "Connect_to_Oracle_Cloud_by_using_wallets"
+        ]
       },
       "How_to_connect_to_Oracle_with_OCI": {
         "id": "How_to_connect_to_Oracle_with_OCI",
@@ -5382,7 +5499,9 @@
         "level": 4,
         "tabIndex": 20,
         "doNotShowWarningLink": true,
-        "pages": ["How_to_connect_to_Heroku_Postgres"]
+        "pages": [
+          "How_to_connect_to_Heroku_Postgres"
+        ]
       },
       "How_to_connect_to_Heroku_Postgres": {
         "id": "How_to_connect_to_Heroku_Postgres",
@@ -5401,7 +5520,9 @@
         "level": 4,
         "tabIndex": 21,
         "doNotShowWarningLink": true,
-        "pages": ["Redis_Properties"]
+        "pages": [
+          "Redis_Properties"
+        ]
       },
       "Redis_Properties": {
         "id": "Redis_Properties",
@@ -5456,7 +5577,10 @@
         "level": 4,
         "tabIndex": 26,
         "doNotShowWarningLink": true,
-        "pages": ["DDL_mappings", "Databases_in_the_Version_Control_System"]
+        "pages": [
+          "DDL_mappings",
+          "Databases_in_the_Version_Control_System"
+        ]
       },
       "DDL_mappings": {
         "id": "DDL_mappings",
@@ -5493,7 +5617,9 @@
         "level": 3,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["Configuring_SSH_and_SSL"]
+        "pages": [
+          "Configuring_SSH_and_SSL"
+        ]
       },
       "Configuring_SSH_and_SSL": {
         "id": "Configuring_SSH_and_SSL",
@@ -5528,7 +5654,11 @@
         "parentId": "Relational_Databases",
         "level": 2,
         "tabIndex": 1,
-        "pages": ["Run_a_query", "Run_SQL_Files", "Debugging_Oracle_PL_SQL_code"]
+        "pages": [
+          "Run_a_query",
+          "Run_SQL_Files",
+          "Debugging_Oracle_PL_SQL_code"
+        ]
       },
       "Run_a_query": {
         "id": "Run_a_query",
@@ -5538,7 +5668,10 @@
         "level": 3,
         "tabIndex": 0,
         "doNotShowWarningLink": true,
-        "pages": ["Viewing_Query_Results", "Query_execution_plan"]
+        "pages": [
+          "Viewing_Query_Results",
+          "Query_execution_plan"
+        ]
       },
       "Viewing_Query_Results": {
         "id": "Viewing_Query_Results",
@@ -5584,7 +5717,11 @@
         "level": 2,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["Tables_view_data", "Work_with_data", "Submitting_and_reverting_changes"]
+        "pages": [
+          "Tables_view_data",
+          "Work_with_data",
+          "Submitting_and_reverting_changes"
+        ]
       },
       "Tables_view_data": {
         "id": "Tables_view_data",
@@ -5603,7 +5740,12 @@
         "level": 3,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["Tables_sort", "Tables_filter", "Rows", "Cells"]
+        "pages": [
+          "Tables_sort",
+          "Tables_filter",
+          "Rows",
+          "Cells"
+        ]
       },
       "Tables_sort": {
         "id": "Tables_sort",
@@ -5726,7 +5868,12 @@
         "level": 3,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["Tables_create_and_delete", "Tables_copy", "Tables_modify", "Tables_export"]
+        "pages": [
+          "Tables_create_and_delete",
+          "Tables_copy",
+          "Tables_modify",
+          "Tables_export"
+        ]
       },
       "Tables_create_and_delete": {
         "id": "Tables_create_and_delete",
@@ -5824,7 +5971,11 @@
         "parentId": "20a7d9e9",
         "level": 3,
         "tabIndex": 9,
-        "pages": ["Virtual_foreign_keys", "Virtual_views", "Virtual_columns"]
+        "pages": [
+          "Virtual_foreign_keys",
+          "Virtual_views",
+          "Virtual_columns"
+        ]
       },
       "Virtual_foreign_keys": {
         "id": "Virtual_foreign_keys",
@@ -5879,7 +6030,10 @@
         "level": 2,
         "tabIndex": 5,
         "doNotShowWarningLink": true,
-        "pages": ["Working_with_Query_Consoles", "Working_with_user_files"]
+        "pages": [
+          "Working_with_Query_Consoles",
+          "Working_with_user_files"
+        ]
       },
       "Working_with_Query_Consoles": {
         "id": "Working_with_Query_Consoles",
@@ -5907,7 +6061,11 @@
         "level": 2,
         "tabIndex": 6,
         "doNotShowWarningLink": true,
-        "pages": ["Export_data", "Import_data", "Data_extractors"]
+        "pages": [
+          "Export_data",
+          "Import_data",
+          "Data_extractors"
+        ]
       },
       "Export_data": {
         "id": "Export_data",
@@ -5942,7 +6100,9 @@
         "parentId": "Relational_Databases",
         "level": 2,
         "tabIndex": 7,
-        "pages": ["Configure_the_SQL_code_style"]
+        "pages": [
+          "Configure_the_SQL_code_style"
+        ]
       },
       "Configure_the_SQL_code_style": {
         "id": "Configure_the_SQL_code_style",
@@ -6330,7 +6490,11 @@
         "parentId": "Big_Data_Tools_Support",
         "level": 2,
         "tabIndex": 1,
-        "pages": ["Big_Data_Tools_Local_file_system", "Big_Data_Tools_HDFS", "Big_Data_Tools_SFTP"]
+        "pages": [
+          "Big_Data_Tools_Local_file_system",
+          "Big_Data_Tools_HDFS",
+          "Big_Data_Tools_SFTP"
+        ]
       },
       "Big_Data_Tools_Local_file_system": {
         "id": "Big_Data_Tools_Local_file_system",
@@ -6612,7 +6776,10 @@
         "level": 1,
         "tabIndex": 8,
         "doNotShowWarningLink": true,
-        "pages": ["Matplotlib_Support", "IPython_Notebook_Support"]
+        "pages": [
+          "Matplotlib_Support",
+          "IPython_Notebook_Support"
+        ]
       },
       "Matplotlib_Support": {
         "id": "Matplotlib_Support",
@@ -6622,7 +6789,9 @@
         "level": 2,
         "tabIndex": 0,
         "doNotShowWarningLink": true,
-        "pages": ["Matplotlib_Tutorial"]
+        "pages": [
+          "Matplotlib_Tutorial"
+        ]
       },
       "Matplotlib_Tutorial": {
         "id": "Matplotlib_Tutorial",
@@ -6737,7 +6906,9 @@
         "level": 1,
         "tabIndex": 14,
         "doNotShowWarningLink": true,
-        "pages": ["Tutorial_File_Watchers_in_product"]
+        "pages": [
+          "Tutorial_File_Watchers_in_product"
+        ]
       },
       "Tutorial_File_Watchers_in_product": {
         "id": "Tutorial_File_Watchers_in_product",
@@ -6765,7 +6936,9 @@
         "level": 1,
         "tabIndex": 16,
         "doNotShowWarningLink": true,
-        "pages": ["Tutorial_Configuring_Generic_Task_Server"]
+        "pages": [
+          "Tutorial_Configuring_Generic_Task_Server"
+        ]
       },
       "Tutorial_Configuring_Generic_Task_Server": {
         "id": "Tutorial_Configuring_Generic_Task_Server",
@@ -6868,7 +7041,11 @@
         "level": 2,
         "tabIndex": 0,
         "doNotShowWarningLink": true,
-        "pages": ["GUI_Designer_Files", "Bound_Class", "GUI_Designer_Output_Options"]
+        "pages": [
+          "GUI_Designer_Files",
+          "Bound_Class",
+          "GUI_Designer_Output_Options"
+        ]
       },
       "GUI_Designer_Files": {
         "id": "GUI_Designer_Files",
@@ -7183,7 +7360,10 @@
         "level": 3,
         "tabIndex": 5,
         "doNotShowWarningLink": true,
-        "pages": ["Configuring_Client_Properties", "Setting_Text_Properties"]
+        "pages": [
+          "Configuring_Client_Properties",
+          "Setting_Text_Properties"
+        ]
       },
       "Configuring_Client_Properties": {
         "id": "Configuring_Client_Properties",
@@ -7613,7 +7793,9 @@
         "level": 1,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["Run_Debug_Configuration_Groovy"]
+        "pages": [
+          "Run_Debug_Configuration_Groovy"
+        ]
       },
       "Run_Debug_Configuration_Groovy": {
         "id": "Run_Debug_Configuration_Groovy",
@@ -7648,7 +7830,9 @@
         "parentId": "ij",
         "level": 0,
         "tabIndex": 16,
-        "pages": ["Create_your_first_Android_application"]
+        "pages": [
+          "Create_your_first_Android_application"
+        ]
       },
       "Create_your_first_Android_application": {
         "id": "Create_your_first_Android_application",
@@ -7734,7 +7918,11 @@
         "level": 2,
         "tabIndex": 3,
         "doNotShowWarningLink": true,
-        "pages": ["Persistence_Tool_Window", "Using_JPA_Console", "Hibernate"]
+        "pages": [
+          "Persistence_Tool_Window",
+          "Using_JPA_Console",
+          "Hibernate"
+        ]
       },
       "Persistence_Tool_Window": {
         "id": "Persistence_Tool_Window",
@@ -7762,7 +7950,9 @@
         "level": 3,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["Working_with_the_Hibernate_console"]
+        "pages": [
+          "Working_with_the_Hibernate_console"
+        ]
       },
       "Working_with_the_Hibernate_console": {
         "id": "Working_with_the_Hibernate_console",
@@ -7864,7 +8054,9 @@
         "level": 2,
         "tabIndex": 5,
         "doNotShowWarningLink": true,
-        "pages": ["Run_Debug_Configuration_Cloud_Foundry_Server"]
+        "pages": [
+          "Run_Debug_Configuration_Cloud_Foundry_Server"
+        ]
       },
       "Run_Debug_Configuration_Cloud_Foundry_Server": {
         "id": "Run_Debug_Configuration_Cloud_Foundry_Server",
@@ -8476,7 +8668,10 @@
         "level": 1,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["Dart_Settings_Dialog", "Dart_Analysis_Tool_Window"]
+        "pages": [
+          "Dart_Settings_Dialog",
+          "Dart_Analysis_Tool_Window"
+        ]
       },
       "Dart_Settings_Dialog": {
         "id": "Dart_Settings_Dialog",
@@ -8504,7 +8699,10 @@
         "level": 1,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["Erlang_Start_Project", "Erlang_Compile_Run_Debug"]
+        "pages": [
+          "Erlang_Start_Project",
+          "Erlang_Compile_Run_Debug"
+        ]
       },
       "Erlang_Start_Project": {
         "id": "Erlang_Start_Project",
@@ -8728,7 +8926,9 @@
         "level": 2,
         "tabIndex": 4,
         "doNotShowWarningLink": true,
-        "pages": ["Using_the_Testify_toolkit"]
+        "pages": [
+          "Using_the_Testify_toolkit"
+        ]
       },
       "Using_the_Testify_toolkit": {
         "id": "Using_the_Testify_toolkit",
@@ -9049,7 +9249,9 @@
         "level": 2,
         "tabIndex": 17,
         "doNotShowWarningLink": true,
-        "pages": ["Next"]
+        "pages": [
+          "Next"
+        ]
       },
       "Next": {
         "id": "Next",
@@ -9211,7 +9413,10 @@
         "level": 1,
         "tabIndex": 8,
         "doNotShowWarningLink": true,
-        "pages": ["Markdown_Reference", "Code_Style_Markdown"]
+        "pages": [
+          "Markdown_Reference",
+          "Code_Style_Markdown"
+        ]
       },
       "Markdown_Reference": {
         "id": "Markdown_Reference",
@@ -9743,7 +9948,10 @@
         "parentId": "PHP-Specific_Guidelines",
         "level": 2,
         "tabIndex": 4,
-        "pages": ["Profiling_with_XDebug", "Profiling_with_Zend_Debugger"]
+        "pages": [
+          "Profiling_with_XDebug",
+          "Profiling_with_Zend_Debugger"
+        ]
       },
       "Profiling_with_XDebug": {
         "id": "Profiling_with_XDebug",
@@ -10016,7 +10224,9 @@
         "level": 4,
         "tabIndex": 5,
         "doNotShowWarningLink": true,
-        "pages": ["Phing_Settings_Dialog"]
+        "pages": [
+          "Phing_Settings_Dialog"
+        ]
       },
       "Phing_Settings_Dialog": {
         "id": "Phing_Settings_Dialog",
@@ -10096,7 +10306,9 @@
         "level": 3,
         "tabIndex": 7,
         "doNotShowWarningLink": true,
-        "pages": ["Run_Configuration_Rector"]
+        "pages": [
+          "Run_Configuration_Rector"
+        ]
       },
       "Run_Configuration_Rector": {
         "id": "Run_Configuration_Rector",
@@ -10316,7 +10528,9 @@
         "level": 3,
         "tabIndex": 0,
         "doNotShowWarningLink": true,
-        "pages": ["Configure_Remote_language_Interpreter"]
+        "pages": [
+          "Configure_Remote_language_Interpreter"
+        ]
       },
       "Configure_Remote_language_Interpreter": {
         "id": "Configure_Remote_language_Interpreter",
@@ -10335,7 +10549,11 @@
         "level": 3,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["Skipped_Paths", "Xdebug_Proxy", "Step_Filters"]
+        "pages": [
+          "Skipped_Paths",
+          "Xdebug_Proxy",
+          "Step_Filters"
+        ]
       },
       "Skipped_Paths": {
         "id": "Skipped_Paths",
@@ -10372,7 +10590,9 @@
         "level": 3,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["Import_From_Deployment_Configuration"]
+        "pages": [
+          "Import_From_Deployment_Configuration"
+        ]
       },
       "Import_From_Deployment_Configuration": {
         "id": "Import_From_Deployment_Configuration",
@@ -10595,7 +10815,10 @@
         "level": 2,
         "tabIndex": 0,
         "doNotShowWarningLink": true,
-        "pages": ["Type_Hinting_in_product_", "Using_Docstrings_to_Specify_Types"]
+        "pages": [
+          "Type_Hinting_in_product_",
+          "Using_Docstrings_to_Specify_Types"
+        ]
       },
       "Type_Hinting_in_product_": {
         "id": "Type_Hinting_in_product_",
@@ -10724,7 +10947,10 @@
         "level": 3,
         "tabIndex": 8,
         "doNotShowWarningLink": true,
-        "pages": ["Managing_Dependencies", "Using_Pipfile"]
+        "pages": [
+          "Managing_Dependencies",
+          "Using_Pipfile"
+        ]
       },
       "Managing_Dependencies": {
         "id": "Managing_Dependencies",
@@ -10768,7 +10994,10 @@
         "parentId": "Plugin_Overview",
         "level": 2,
         "tabIndex": 5,
-        "pages": ["Part_1._Debugging__language__Code", "Remote_Debugging_with__product_"]
+        "pages": [
+          "Part_1._Debugging__language__Code",
+          "Remote_Debugging_with__product_"
+        ]
       },
       "Part_1._Debugging__language__Code": {
         "id": "Part_1._Debugging__language__Code",
@@ -10794,7 +11023,11 @@
         "parentId": "Plugin_Overview",
         "level": 2,
         "tabIndex": 6,
-        "pages": ["Choosing_Your_Testing_Framework", "Creating_Tests", "Product_Tests"]
+        "pages": [
+          "Choosing_Your_Testing_Framework",
+          "Creating_Tests",
+          "Product_Tests"
+        ]
       },
       "Choosing_Your_Testing_Framework": {
         "id": "Choosing_Your_Testing_Framework",
@@ -10804,7 +11037,10 @@
         "level": 3,
         "tabIndex": 0,
         "doNotShowWarningLink": true,
-        "pages": ["Pytest", "Test-Driven_Development_with_Twisted"]
+        "pages": [
+          "Pytest",
+          "Test-Driven_Development_with_Twisted"
+        ]
       },
       "Pytest": {
         "id": "Pytest",
@@ -10928,7 +11164,10 @@
         "level": 3,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["Run_Debug_Configuration_DocUtil_Task", "Run_Debug_Configuration_Sphinx_Task"]
+        "pages": [
+          "Run_Debug_Configuration_DocUtil_Task",
+          "Run_Debug_Configuration_Sphinx_Task"
+        ]
       },
       "Run_Debug_Configuration_DocUtil_Task": {
         "id": "Run_Debug_Configuration_DocUtil_Task",
@@ -11602,7 +11841,10 @@
         "level": 2,
         "tabIndex": 5,
         "doNotShowWarningLink": true,
-        "pages": ["Generating_Java_Code_from_XML_Schema", "Generating_Xml_Schema_From_Java_Code"]
+        "pages": [
+          "Generating_Java_Code_from_XML_Schema",
+          "Generating_Xml_Schema_From_Java_Code"
+        ]
       },
       "Generating_Java_Code_from_XML_Schema": {
         "id": "Generating_Java_Code_from_XML_Schema",
@@ -11726,7 +11968,9 @@
         "level": 3,
         "tabIndex": 2,
         "doNotShowWarningLink": true,
-        "pages": ["XPath_Inspections"]
+        "pages": [
+          "XPath_Inspections"
+        ]
       },
       "XPath_Inspections": {
         "id": "XPath_Inspections",
@@ -11983,7 +12227,12 @@
         "level": 2,
         "tabIndex": 16,
         "doNotShowWarningLink": true,
-        "pages": ["Deployment_Console", "Logs_Tab", "Groovy_Shell", "Interactive_Groovy_Console"]
+        "pages": [
+          "Deployment_Console",
+          "Logs_Tab",
+          "Groovy_Shell",
+          "Interactive_Groovy_Console"
+        ]
       },
       "Deployment_Console": {
         "id": "Deployment_Console",
@@ -12337,7 +12586,10 @@
         "parentId": "c1a56cc2",
         "level": 2,
         "tabIndex": 12,
-        "pages": ["Differences_Viewer", "Differences_Viewer_for_Folders"]
+        "pages": [
+          "Differences_Viewer",
+          "Differences_Viewer_for_Folders"
+        ]
       },
       "Differences_Viewer": {
         "id": "Differences_Viewer",
@@ -12479,7 +12731,9 @@
         "level": 2,
         "tabIndex": 19,
         "doNotShowWarningLink": true,
-        "pages": ["Templates_Dialog"]
+        "pages": [
+          "Templates_Dialog"
+        ]
       },
       "Templates_Dialog": {
         "id": "Templates_Dialog",
@@ -12622,7 +12876,12 @@
         "parentId": "c1a56cc2",
         "level": 2,
         "tabIndex": 34,
-        "pages": ["Copy_Dialog", "Extract_Dialogs", "Move_Dialogs", "Rename_Dialogs"]
+        "pages": [
+          "Copy_Dialog",
+          "Extract_Dialogs",
+          "Move_Dialogs",
+          "Rename_Dialogs"
+        ]
       },
       "Copy_Dialog": {
         "id": "Copy_Dialog",
@@ -13192,7 +13451,10 @@
         "level": 3,
         "tabIndex": 20,
         "doNotShowWarningLink": true,
-        "pages": ["Node_js_Interpreters", "Configure_Node_js_Remote_Interpreter"]
+        "pages": [
+          "Node_js_Interpreters",
+          "Configure_Node_js_Remote_Interpreter"
+        ]
       },
       "Node_js_Interpreters": {
         "id": "Node_js_Interpreters",
@@ -14029,7 +14291,9 @@
         "level": 3,
         "tabIndex": 8,
         "doNotShowWarningLink": true,
-        "pages": ["Edit_Template_Variables_Dialog"]
+        "pages": [
+          "Edit_Template_Variables_Dialog"
+        ]
       },
       "Edit_Template_Variables_Dialog": {
         "id": "Edit_Template_Variables_Dialog",
@@ -14048,7 +14312,10 @@
         "level": 3,
         "tabIndex": 9,
         "doNotShowWarningLink": true,
-        "pages": ["Copyright_Profiles", "Formatting"]
+        "pages": [
+          "Copyright_Profiles",
+          "Formatting"
+        ]
       },
       "Copyright_Profiles": {
         "id": "Copyright_Profiles",
@@ -14067,7 +14334,9 @@
         "level": 4,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["File_Types_Settings"]
+        "pages": [
+          "File_Types_Settings"
+        ]
       },
       "File_Types_Settings": {
         "id": "File_Types_Settings",
@@ -14233,7 +14502,10 @@
         "level": 3,
         "tabIndex": 15,
         "doNotShowWarningLink": true,
-        "pages": ["Add_Edit_Pattern_Dialog", "Add_Edit_Filter"]
+        "pages": [
+          "Add_Edit_Pattern_Dialog",
+          "Add_Edit_Filter"
+        ]
       },
       "Add_Edit_Pattern_Dialog": {
         "id": "Add_Edit_Pattern_Dialog",
@@ -14270,7 +14542,9 @@
         "level": 2,
         "tabIndex": 3,
         "doNotShowWarningLink": true,
-        "pages": ["Custom_Plugin_Repositories"]
+        "pages": [
+          "Custom_Plugin_Repositories"
+        ]
       },
       "Custom_Plugin_Repositories": {
         "id": "Custom_Plugin_Repositories",
@@ -14346,7 +14620,9 @@
         "level": 3,
         "tabIndex": 4,
         "doNotShowWarningLink": true,
-        "pages": ["Add_Issue_Navigation_Link_Dialog"]
+        "pages": [
+          "Add_Issue_Navigation_Link_Dialog"
+        ]
       },
       "Add_Issue_Navigation_Link_Dialog": {
         "id": "Add_Issue_Navigation_Link_Dialog",
@@ -14401,7 +14677,9 @@
         "level": 3,
         "tabIndex": 9,
         "doNotShowWarningLink": true,
-        "pages": ["Edit_Subversion_Options_Related_to_Network_Layers_Dialog"]
+        "pages": [
+          "Edit_Subversion_Options_Related_to_Network_Layers_Dialog"
+        ]
       },
       "Edit_Subversion_Options_Related_to_Network_Layers_Dialog": {
         "id": "Edit_Subversion_Options_Related_to_Network_Layers_Dialog",
@@ -14441,7 +14719,12 @@
         "level": 3,
         "tabIndex": 0,
         "doNotShowWarningLink": true,
-        "pages": ["SBT", "Maven", "Gradle_Settings", "Gant_Settings"]
+        "pages": [
+          "SBT",
+          "Maven",
+          "Gradle_Settings",
+          "Gant_Settings"
+        ]
       },
       "SBT": {
         "id": "SBT",
@@ -14738,7 +15021,10 @@
         "level": 3,
         "tabIndex": 6,
         "doNotShowWarningLink": true,
-        "pages": ["Console_Python_Console", "Console_Django_Console"]
+        "pages": [
+          "Console_Python_Console",
+          "Console_Django_Console"
+        ]
       },
       "Console_Python_Console": {
         "id": "Console_Python_Console",
@@ -14775,7 +15061,11 @@
         "level": 3,
         "tabIndex": 8,
         "doNotShowWarningLink": true,
-        "pages": ["Settings_Docker_Registry", "Settings_Docker_Tools", "Settings_Docker_Console"]
+        "pages": [
+          "Settings_Docker_Registry",
+          "Settings_Docker_Tools",
+          "Settings_Docker_Console"
+        ]
       },
       "Settings_Docker_Registry": {
         "id": "Settings_Docker_Registry",
@@ -14841,7 +15131,9 @@
         "level": 3,
         "tabIndex": 0,
         "doNotShowWarningLink": true,
-        "pages": ["Settings_JavaScript_Bower"]
+        "pages": [
+          "Settings_JavaScript_Bower"
+        ]
       },
       "Settings_JavaScript_Bower": {
         "id": "Settings_JavaScript_Bower",
@@ -14860,7 +15152,10 @@
         "level": 3,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["Settings_Languages_Default_XML_Schemas", "Settings_Languages_XML_Catalog"]
+        "pages": [
+          "Settings_Languages_Default_XML_Schemas",
+          "Settings_Languages_XML_Catalog"
+        ]
       },
       "Settings_Languages_Default_XML_Schemas": {
         "id": "Settings_Languages_Default_XML_Schemas",
@@ -14915,7 +15210,9 @@
         "level": 3,
         "tabIndex": 5,
         "doNotShowWarningLink": true,
-        "pages": ["Dialects"]
+        "pages": [
+          "Dialects"
+        ]
       },
       "Dialects": {
         "id": "Dialects",
@@ -15000,7 +15297,9 @@
         "level": 3,
         "tabIndex": 1,
         "doNotShowWarningLink": true,
-        "pages": ["New_Watcher_Dialog"]
+        "pages": [
+          "New_Watcher_Dialog"
+        ]
       },
       "New_Watcher_Dialog": {
         "id": "New_Watcher_Dialog",
@@ -15053,7 +15352,10 @@
         "level": 4,
         "tabIndex": 0,
         "doNotShowWarningLink": true,
-        "pages": ["Output_and_Results", "Settings_Tools_Database_User_Parameters"]
+        "pages": [
+          "Output_and_Results",
+          "Settings_Tools_Database_User_Parameters"
+        ]
       },
       "Output_and_Results": {
         "id": "Output_and_Results",
@@ -15135,7 +15437,10 @@
         "level": 3,
         "tabIndex": 7,
         "doNotShowWarningLink": true,
-        "pages": ["Big_Data_Tools_Charts_Settings", "Big_Data_Tools_Charts_Notebook_Settings"]
+        "pages": [
+          "Big_Data_Tools_Charts_Settings",
+          "Big_Data_Tools_Charts_Notebook_Settings"
+        ]
       },
       "Big_Data_Tools_Charts_Settings": {
         "id": "Big_Data_Tools_Charts_Settings",
@@ -15172,7 +15477,9 @@
         "level": 3,
         "tabIndex": 9,
         "doNotShowWarningLink": true,
-        "pages": ["Settings_Tools_External_Diff_Tools"]
+        "pages": [
+          "Settings_Tools_External_Diff_Tools"
+        ]
       },
       "Settings_Tools_External_Diff_Tools": {
         "id": "Settings_Tools_External_Diff_Tools",
@@ -15425,6 +15732,7 @@
     }
   },
   "topLevelIds": [
+    "Test_Test_Test",
     "Getting_started",
     "Configuring_Project_and_IDE_Settings",
     "Working_with_projects",

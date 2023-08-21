@@ -8,7 +8,7 @@ import {
   useState,
 } from 'react';
 
-import type { ITableOfContents, TocPage, TocPageId } from '../types/ITableOfContents';
+import type { ITableOfContents, TocPageId, TocPages } from '../types/ITableOfContents';
 
 import { usePagePath } from '../hooks';
 
@@ -35,7 +35,7 @@ export const TocContextProvider: FC<PropsWithChildren<TocContextProviderProps>> 
 export interface ITocContext {
   activePageId: TocPageId | null;
   pagePath: TocPageId[];
-  pages: Record<string, TocPage>;
+  pages: TocPages;
   setActivePageId: Dispatch<SetStateAction<TocPageId | null>>;
   topLevelIds: TocPageId[];
 }

@@ -8,22 +8,18 @@ export function usePagePath(activePageId: TocPageId | null, pages: TocPages) {
   useEffect(() => {
     if (!activePageId) return;
 
+    let currentPageId = activePageId;
     let chain = [];
 
-    // TODO: remove unshift and recursion
-    (function traverse(pageId: TocPageId) {
-      if (!pages[pageId]) return;
-
-      if (pages[pageId].pages?.length) {
-        chain.unshift(pageId);
+    while (currentPageId) {
+      const page = pages[currentPageId];
+      if (page?.pages?.length) {
+        chain.push(currentPageId);
       }
+      currentPageId = page?.parentId;
+    }
 
-      if (pages[pageId].parentId) {
-        traverse(pages[pageId].parentId);
-      }
-    })(activePageId);
-
-    setPath(chain);
+    setPath(chain.reverse());
   }, [activePageId, pages]);
 
   return path;
