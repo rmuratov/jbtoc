@@ -12,8 +12,6 @@ export function useExpandHandlers(id: TocPageId) {
     e => {
       e.preventDefault();
 
-      setActivePageId(id);
-
       setIsExpanded(isExpanded => {
         if (isExpanded && id !== activePageId) {
           return true;
@@ -21,6 +19,8 @@ export function useExpandHandlers(id: TocPageId) {
 
         return !isExpanded;
       });
+
+      setActivePageId(id);
     },
     [activePageId, id, setActivePageId],
   );

@@ -4,7 +4,11 @@ export const ListItemContainer: FC<PropsWithChildren<ListItemContainerProps>> = 
   children,
   onClick,
 }) => {
-  return <li onClick={onClick}>{children}</li>;
+  return (
+    <li data-testid="list-item-container" onClick={onClick}>
+      {children}
+    </li>
+  );
 };
 
 export interface ListItemContainerProps {

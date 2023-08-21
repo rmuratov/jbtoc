@@ -5,7 +5,11 @@ import cx from 'clsx';
 import s from './Container.module.scss';
 
 export const Container: FC<PropsWithChildren<ContainerProps>> = ({ children, className }) => {
-  return <nav className={cx(s.container, className)}>{children}</nav>;
+  return (
+    <nav className={cx(s.container, className)} data-testid="container">
+      {children}
+    </nav>
+  );
 };
 
 export interface ContainerProps {

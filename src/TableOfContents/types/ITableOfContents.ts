@@ -8,7 +8,6 @@ export interface TocEntities {
 }
 
 export interface TocPage {
-  doNotShowWarningLink?: boolean;
   id: TocPageId;
   level: number;
   pages?: TocPageId[];
