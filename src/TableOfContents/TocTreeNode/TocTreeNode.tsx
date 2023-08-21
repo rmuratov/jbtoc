@@ -36,7 +36,7 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
 };
 
 export interface TocTreeNodeProps {
-  highlight?: 'none' | 'primary' | 'secondary';
+  highlight: 'none' | 'primary' | 'secondary';
   id: string;
   pages?: TocPageId[];
 }

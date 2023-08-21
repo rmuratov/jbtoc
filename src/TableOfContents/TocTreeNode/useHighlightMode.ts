@@ -2,18 +2,15 @@ import type { TocPageId } from '../types/ITableOfContents';
 
 import { useTocContext } from '../hooks';
 
-export function useHighlightMode(pageId: TocPageId, prev?: 'none' | 'primary' | 'secondary') {
-  const { pagePath, pages } = useTocContext();
+export function useHighlightMode(pageId: TocPageId, parent: 'none' | 'primary' | 'secondary') {
+  const { activePagePath, pages } = useTocContext();
 
   const page = pages[pageId];
 
-  if (!prev && pagePath.includes(pageId)) {
-    return 'secondary';
-  } else if (!prev) {
-    return 'none';
-  } else if (prev !== 'none' && page.id === pagePath.at(-1)) {
+  const isInsideLastLevel = page.id === activePagePath.at(-1);
+  if (page.level > 0 && isInsideLastLevel) {
     return 'primary';
   }
 
-  return prev;
+  return parent;
 }

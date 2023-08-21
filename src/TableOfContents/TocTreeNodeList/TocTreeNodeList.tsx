@@ -4,6 +4,8 @@ import { TocTreeNode } from '../TocTreeNode/TocTreeNode';
 import { useTocContext } from '../hooks';
 
 export const TocTreeNodeList: FC = () => {
-  const { topLevelIds } = useTocContext();
-  return topLevelIds.map(id => <TocTreeNode id={id} key={id} />);
+  const { activePagePath, topLevelIds } = useTocContext();
+  return topLevelIds.map(id => (
+    <TocTreeNode highlight={activePagePath[0] === id ? 'secondary' : 'none'} id={id} key={id} />
+  ));
 };

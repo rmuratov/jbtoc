@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import type { TocPageId, TocPages } from '../types/ITableOfContents';
 
-export function usePagePath(activePageId: TocPageId | null, pages: TocPages) {
+export function useActivePagePath(activePageId: TocPageId | null, pages: TocPages) {
   const [path, setPath] = useState<TocPageId[]>([]);
 
   useEffect(() => {
