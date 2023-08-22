@@ -1,12 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useMemo } from 'react';
 
 import type { TocPageId, TocPages } from '../types/ITableOfContents';
 
-export function useActivePagePath(activePageId: TocPageId | null, pages: TocPages) {
-  const [path, setPath] = useState<TocPageId[]>([]);
-
-  useEffect(() => {
-    if (!activePageId) return;
+export function useActivePagePath(activePageId: TocPageId | null, pages: TocPages): TocPageId[] {
+  return useMemo(() => {
+    if (!activePageId) return [];
 
     let currentPageId = activePageId;
     let chain = [];
@@ -19,8 +17,6 @@ export function useActivePagePath(activePageId: TocPageId | null, pages: TocPage
       currentPageId = page?.parentId;
     }
 
-    setPath(chain.reverse());
-  }, [activePageId, pages]);
-
-  return path;
+    return chain.reverse();
+  }, [pages, activePageId]);
 }
