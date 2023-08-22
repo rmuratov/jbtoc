@@ -5,7 +5,8 @@ export const ListItemContainer: FC<PropsWithChildren<ListItemContainerProps>> = 
   onClick,
 }) => {
   return (
-    <li data-testid="list-item-container" onClick={onClick}>
+    // TODO: MOve onClick to item
+    <li data-testid="toc-list-item-container" onClick={onClick}>
       {children}
     </li>
   );

@@ -9,8 +9,8 @@ import { useHighlightMode } from './useHighlightMode';
 
 export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
   const { activePageId, pages } = useTocContext();
-  const highlightMode = useHighlightMode(id, highlight);
   const { handleButtonExpandClick, handleItemClick, isExpanded } = useExpandHandlers(id);
+  const highlightMode = useHighlightMode(id, highlight);
 
   const page = pages[id];
 

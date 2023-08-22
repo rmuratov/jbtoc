@@ -24,7 +24,7 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
         secondary && s.highlightSecondary,
         isSelected && s.selected,
       )}
-      data-testid="list-item"
+      data-testid="toc-list-item"
       href={href}
       style={style}
     >

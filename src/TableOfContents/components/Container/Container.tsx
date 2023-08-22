@@ -6,7 +6,7 @@ import s from './Container.module.scss';
 
 export const Container: FC<PropsWithChildren<ContainerProps>> = ({ children, className }) => {
   return (
-    <nav className={cx(s.container, className)} data-testid="container">
+    <nav className={cx(s.container, className)} data-testid="toc-container">
       {children}
     </nav>
   );

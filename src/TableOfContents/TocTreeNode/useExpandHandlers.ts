@@ -5,8 +5,8 @@ import type { TocPageId } from '../types/ITableOfContents';
 import { useTocContext } from '../hooks';
 
 export function useExpandHandlers(id: TocPageId) {
-  const [isExpanded, setIsExpanded] = useState(false);
   const { activePageId, setActivePageId } = useTocContext();
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleItemClick: MouseEventHandler = useCallback(
     e => {

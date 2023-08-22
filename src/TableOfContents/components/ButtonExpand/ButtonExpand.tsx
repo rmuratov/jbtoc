@@ -8,7 +8,7 @@ export const ButtonExpand: FC<ButtonExpandProps> = ({ className, isExpanded, onC
   return (
     <svg
       className={cx(s.icon, isExpanded && s.expanded, className)}
-      data-testid="button-expand"
+      data-testid="toc-button-expand"
       height="16"
       onClick={onClick}
       viewBox="0 0 16 16"
