@@ -20,7 +20,9 @@ export function useExpandHandlers(id: TocPageId) {
         return !isExpanded;
       });
 
-      setActivePageId(id);
+      if (activePageId !== id) {
+        setActivePageId(id);
+      }
     },
     [activePageId, id, setActivePageId],
   );

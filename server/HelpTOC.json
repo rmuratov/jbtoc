@@ -1,15 +1,6 @@
 {
   "entities": {
     "pages": {
-      "Test_Test_Test": {
-        "id": "Test_Test_Test",
-        "title": "Test Test Test",
-        "url": "test-test-test.html",
-        "parentId": "ij",
-        "level": 0,
-        "tabIndex": 0,
-        "doNotShowWarningLink": true
-      },
       "Getting_started": {
         "id": "Getting_started",
         "title": "Getting started",
@@ -15732,7 +15723,6 @@
     }
   },
   "topLevelIds": [
-    "Test_Test_Test",
     "Getting_started",
     "Configuring_Project_and_IDE_Settings",
     "Working_with_projects",
