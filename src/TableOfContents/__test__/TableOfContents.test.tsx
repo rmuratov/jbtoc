@@ -48,7 +48,8 @@ describe('expanding/collapsing', () => {
   test('does not collapse after clicking an active item', async () => {
     render(<TableOfContents data={data} />);
     await userEvent.click(screen.getByText('Page 1'));
-    await userEvent.click(screen.getByText('Page 1 1'));
+    await userEvent.click(screen.getByText('Page 2'));
+    await userEvent.click(screen.getByText('Page 1'));
     await screen.findByText('Page 1 1');
   });
 
