@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 
+import type { HighlightMode } from '../types/HighlightLevels';
 import type { TocPageId } from '../types/ITableOfContents';
 
 import { ButtonExpand, ListItem, ListItemContainer } from '../components';
@@ -16,12 +17,13 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
 
   return (
     <>
-      <ListItemContainer onClick={handleItemClick}>
+      <ListItemContainer>
         <ListItem
           highlight={highlightMode}
           href={page.url}
           isSelected={activePageId === id}
           level={page.level}
+          onClick={handleItemClick}
         >
           {page.pages?.length && (
             <ButtonExpand isExpanded={isExpanded} onClick={handleButtonExpandClick} />
@@ -36,7 +38,7 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
 };
 
 export interface TocTreeNodeProps {
-  highlight: 'none' | 'primary' | 'secondary';
+  highlight: HighlightMode;
   id: string;
   pages?: TocPageId[];
 }

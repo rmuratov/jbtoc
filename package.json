@@ -34,7 +34,10 @@
     ],
     "plugins": [
       "perfectionist"
-    ]
+    ],
+    "rules": {
+      "perfectionist/sort-enums": "off"
+    }
   },
   "browserslist": {
     "production": [

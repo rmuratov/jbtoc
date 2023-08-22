@@ -1,20 +1,23 @@
-import type { CSSProperties, FC, PropsWithChildren } from 'react';
+import type { AllHTMLAttributes, CSSProperties, FC, PropsWithChildren } from 'react';
 
 import cx from 'clsx';
 
+import { HighlightMode } from '../../types/HighlightLevels';
 import s from './ListItem.module.scss';
 
 export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
   children,
+  className,
   highlight,
-  href,
   isSelected,
   level,
+  style,
+  ...rest
 }) => {
-  const primary = highlight === 'primary';
-  const secondary = highlight === 'secondary';
+  const primary = highlight === HighlightMode.Primary;
+  const secondary = highlight === HighlightMode.Secondary;
 
-  const style = { '--level': level } as CSSProperties;
+  const levelStyle = { '--level': level } as CSSProperties;
 
   return (
     <a
@@ -23,19 +26,19 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
         primary && s.highlightPrimary,
         secondary && s.highlightSecondary,
         isSelected && s.selected,
+        className,
       )}
       data-testid="toc-list-item"
-      href={href}
-      style={style}
+      style={{ ...style, ...levelStyle }}
+      {...rest}
     >
       {children}
     </a>
   );
 };
 
-export interface ListItemProps {
-  highlight: 'none' | 'primary' | 'secondary';
-  href?: string;
+export interface ListItemProps extends AllHTMLAttributes<HTMLAnchorElement> {
+  highlight: HighlightMode;
   isSelected: boolean;
   level: number;
 }
