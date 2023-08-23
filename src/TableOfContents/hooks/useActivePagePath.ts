@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import type { TocPageId, TocPages } from '../types/ITableOfContents';
+import type { TocPageId, TocPages } from '../types';
 
 export function useActivePagePath(activePageId: TocPageId | null, pages: TocPages): TocPageId[] {
   return useMemo(() => {

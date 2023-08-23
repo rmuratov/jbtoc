@@ -8,7 +8,8 @@ import {
   useState,
 } from 'react';
 
-import type { ITableOfContents, TocPageId, TocPages } from '../types/ITableOfContents';
+import type { ITableOfContents, TocPageId, TocPages } from '../types';
+import type { Theme } from '../types/Theme';
 
 import { useActivePagePath } from '../hooks';
 
@@ -18,6 +19,7 @@ export const TocContext = createContext<ITocContext | undefined>(undefined);
 export const TocContextProvider: FC<PropsWithChildren<TocContextProviderProps>> = ({
   children,
   data,
+  theme,
 }) => {
   const pages = data.entities.pages;
   const topLevelIds = data.topLevelIds;
@@ -26,8 +28,8 @@ export const TocContextProvider: FC<PropsWithChildren<TocContextProviderProps>> 
   const activePagePath = useActivePagePath(activePageId, pages);
 
   const value = useMemo(
-    () => ({ activePageId, activePagePath, pages, setActivePageId, topLevelIds }),
-    [activePageId, activePagePath, pages, topLevelIds],
+    () => ({ activePageId, activePagePath, pages, setActivePageId, theme, topLevelIds }),
+    [activePageId, activePagePath, pages, topLevelIds, theme],
   );
 
   return <TocContext.Provider value={value}>{children}</TocContext.Provider>;
@@ -38,9 +40,11 @@ export interface ITocContext {
   activePagePath: TocPageId[];
   pages: TocPages;
   setActivePageId: Dispatch<SetStateAction<TocPageId | null>>;
+  theme: Theme;
   topLevelIds: TocPageId[];
 }
 
 export interface TocContextProviderProps {
   data: ITableOfContents;
+  theme: Theme;
 }

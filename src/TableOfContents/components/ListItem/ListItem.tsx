@@ -2,7 +2,7 @@ import type { AllHTMLAttributes, CSSProperties, FC, PropsWithChildren } from 're
 
 import cx from 'clsx';
 
-import { Highlight } from '../../types/HighlightLevels';
+import { Highlight } from '../../types';
 import s from './ListItem.module.scss';
 
 export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({

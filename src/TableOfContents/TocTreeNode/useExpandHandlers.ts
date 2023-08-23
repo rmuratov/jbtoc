@@ -1,6 +1,6 @@
 import { MouseEventHandler, useCallback, useMemo, useState } from 'react';
 
-import type { TocPageId } from '../types/ITableOfContents';
+import type { TocPageId } from '../types';
 
 import { useTocContext } from '../hooks';
 

@@ -1,4 +1,4 @@
-import type { ITableOfContents, TocPageId, TocPages } from '../types/ITableOfContents';
+import type { ITableOfContents, TocPageId, TocPages } from '../types';
 
 type TemplateNode<T> = Record<string, T | null>;
 

@@ -2,7 +2,7 @@ import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import type { ITableOfContents } from '../types/ITableOfContents';
+import type { ITableOfContents } from '../types';
 
 import { TableOfContents } from '../TableOfContents';
 import fixture from './fixture.json';

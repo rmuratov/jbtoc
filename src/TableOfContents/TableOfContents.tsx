@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import cx from 'clsx';
 
-import type { ITableOfContents } from './types/ITableOfContents';
+import type { ITableOfContents } from './types';
 
 import s from './TableOfContents.module.scss';
 import { TocTreeNodeList } from './TocTreeNodeList';
@@ -15,7 +15,7 @@ export const TableOfContents: FC<TableOfContentsProps> = ({ data, isLoading, the
       {isLoading ? (
         <Preloader />
       ) : !data ? null : (
-        <TocContextProvider data={data}>
+        <TocContextProvider data={data} theme={theme}>
           <List>
             <TocTreeNodeList />
           </List>

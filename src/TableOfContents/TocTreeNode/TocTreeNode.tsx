@@ -1,7 +1,6 @@
 import type { FC } from 'react';
 
-import type { Highlight } from '../types/HighlightLevels';
-import type { TocPageId } from '../types/ITableOfContents';
+import type { Highlight, TocPageId } from '../types';
 
 import { ButtonExpand, ListItem, ListItemContainer } from '../components';
 import { useTocContext } from '../hooks';

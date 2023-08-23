@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { TocTreeNode } from '../TocTreeNode/TocTreeNode';
+import { TocTreeNode } from '../TocTreeNode';
 import { useTocContext } from '../hooks';
 
 export const TocTreeNodeList: FC = () => {

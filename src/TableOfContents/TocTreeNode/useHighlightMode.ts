@@ -1,7 +1,5 @@
-import type { TocPageId } from '../types/ITableOfContents';
-
 import { useTocContext } from '../hooks';
-import { Highlight } from '../types/HighlightLevels';
+import { Highlight, type TocPageId } from '../types';
 
 export function useHighlight(
   pageId: TocPageId,
