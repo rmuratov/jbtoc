@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 import type { TocPageId, TocPages } from '../types';
 
-export function useActivePagePath(activePageId: TocPageId | null, pages: TocPages): TocPageId[] {
+export function useActivePagePath(pages: TocPages, activePageId?: TocPageId): TocPageId[] {
   return useMemo(() => {
     if (!activePageId) return [];
 

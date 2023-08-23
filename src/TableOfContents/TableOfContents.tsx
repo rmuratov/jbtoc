@@ -10,6 +10,7 @@ import { Container, List, Preloader } from './components';
 import { TocContextProvider } from './context';
 
 export const TableOfContents: FC<TableOfContentsProps> = ({
+  activePageId,
   containerClassName,
   data,
   isLoading,
@@ -23,6 +24,7 @@ export const TableOfContents: FC<TableOfContentsProps> = ({
         <Preloader />
       ) : !data ? null : (
         <TocContextProvider
+          activePageId={activePageId}
           data={data}
           listItemClassName={listItemClassName}
           onItemClick={onItemClick}
@@ -38,6 +40,7 @@ export const TableOfContents: FC<TableOfContentsProps> = ({
 };
 
 export interface TableOfContentsProps {
+  activePageId?: string;
   containerClassName?: string;
   data?: ITableOfContents;
   isLoading?: boolean;

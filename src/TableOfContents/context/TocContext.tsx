@@ -5,6 +5,7 @@ import {
   type PropsWithChildren,
   type SetStateAction,
   createContext,
+  useEffect,
   useMemo,
   useState,
 } from 'react';
@@ -18,6 +19,7 @@ export const TocContext = createContext<ITocContext | undefined>(undefined);
 
 // TODO: Extract often changed values to separate context
 export const TocContextProvider: FC<PropsWithChildren<TocContextProviderProps>> = ({
+  activePageId: activePageIdProp,
   children,
   data,
   listItemClassName,
@@ -27,8 +29,12 @@ export const TocContextProvider: FC<PropsWithChildren<TocContextProviderProps>> 
   const pages = data.entities.pages;
   const topLevelIds = data.topLevelIds;
 
-  const [activePageId, setActivePageId] = useState<TocPageId | null>(null);
-  const activePagePath = useActivePagePath(activePageId, pages);
+  const [activePageId, setActivePageId] = useState<TocPageId | undefined>(activePageIdProp);
+  const activePagePath = useActivePagePath(pages, activePageId);
+
+  useEffect(() => {
+    setActivePageId(activePageIdProp);
+  }, [activePageIdProp]);
 
   const value = useMemo(
     () => ({
@@ -48,17 +54,18 @@ export const TocContextProvider: FC<PropsWithChildren<TocContextProviderProps>> 
 };
 
 export interface ITocContext {
-  activePageId: TocPageId | null;
+  activePageId?: TocPageId;
   activePagePath: TocPageId[];
   listItemClassName?: string;
   onItemClick?: (page: TocPage, event: MouseEvent) => void;
   pages: TocPages;
-  setActivePageId: Dispatch<SetStateAction<TocPageId | null>>;
+  setActivePageId: Dispatch<SetStateAction<TocPageId | undefined>>;
   theme: Theme;
   topLevelIds: TocPageId[];
 }
 
 export interface TocContextProviderProps {
+  activePageId?: string;
   data: ITableOfContents;
   listItemClassName?: string;
   onItemClick?: (page: TocPage, event: MouseEvent) => void;
