@@ -1,9 +1,9 @@
 .container {
-  width: var(--container-width);
-  box-sizing: border-box;
-  overflow-y: auto;
   padding-top: var(--container-padding-vertical);
+  margin-right: var(--container-padding-horizontal);
+  box-sizing: border-box;
+  width: var(--container-width);
+  overflow-y: auto;
   border: 1px solid var(--container-border-color);
-
   background-color: var(--container-bg-color);
 }
