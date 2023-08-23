@@ -27,6 +27,8 @@
   --item-highlighted-2-bg-color: var(--color-gray-0);
   --item-highlighted-2-bg-color-hover: var(--color-gray-1);
 
+  --item-outline-color: var(--color-violet-0);
+
   --preloader-item-color: var(--color-gray-1);
 
   &.dark {
@@ -48,6 +50,8 @@
     /* Highlighted secondary item color */
     --item-highlighted-2-bg-color: var(--color-gray-5);
     --item-highlighted-2-bg-color-hover: var(--color-gray-4);
+
+    --item-outline-color: var(--color-violet-1);
 
     --preloader-item-color: var(--color-gray-3);
   }

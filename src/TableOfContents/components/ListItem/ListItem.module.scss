@@ -19,7 +19,16 @@
     background-color: var(--item-bg-color-hover);
   }
 
-  &.highlightLastLevel:not(.selected) {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--item-outline-color);
+    outline-offset: -1px;
+  }
+
+  &.highlightLastLevel {
     background-color: var(--item-highlighted-1-bg-color);
 
     &:hover {
@@ -27,7 +36,7 @@
     }
   }
 
-  &.highlightFirstLevel:not(.selected) {
+  &.highlightFirstLevel {
     background-color: var(--item-highlighted-2-bg-color);
 
     &:hover {
@@ -38,5 +47,6 @@
   &.selected {
     color: var(--item-selected-text-color);
     background-color: var(--item-selected-bg-color);
+    outline: none;
   }
 }

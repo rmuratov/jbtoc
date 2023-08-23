@@ -14,8 +14,8 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
   style,
   ...rest
 }) => {
-  const highlightFirstLevel = highlight === Highlight.FirstLevel;
-  const highlightLastLevel = highlight === Highlight.LastLevel;
+  const highlightFirstLevel = highlight === Highlight.FirstLevel && !isSelected;
+  const highlightLastLevel = highlight === Highlight.LastLevel && !isSelected;
 
   const levelStyle = { '--level': level } as CSSProperties;
 
