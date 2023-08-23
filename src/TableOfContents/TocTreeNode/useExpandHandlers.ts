@@ -1,11 +1,14 @@
-import { MouseEventHandler, useCallback, useMemo, useState } from 'react';
+import { MouseEvent, MouseEventHandler, useCallback, useMemo, useState } from 'react';
 
-import type { TocPageId } from '../types';
+import type { TocPage, TocPageId } from '../types';
 
 import { useTocContext } from '../hooks';
 
-export function useExpandHandlers(id: TocPageId) {
-  const { activePageId, setActivePageId } = useTocContext();
+export function useExpandHandlers(
+  id: TocPageId,
+  onClick?: (page: TocPage, event: MouseEvent) => void,
+) {
+  const { activePageId, pages, setActivePageId } = useTocContext();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleItemClick: MouseEventHandler = useCallback(
@@ -23,8 +26,10 @@ export function useExpandHandlers(id: TocPageId) {
       if (activePageId !== id) {
         setActivePageId(id);
       }
+
+      onClick?.(pages[id], e);
     },
-    [activePageId, id, setActivePageId],
+    [activePageId, id, setActivePageId, onClick, pages],
   );
 
   const handleButtonExpandClick: MouseEventHandler = useCallback(e => {

@@ -1,21 +1,33 @@
-import type { FC } from 'react';
+import type { FC, MouseEvent } from 'react';
 
 import cx from 'clsx';
 
-import type { ITableOfContents } from './types';
+import type { ITableOfContents, TocPage } from './types';
 
 import s from './TableOfContents.module.scss';
 import { TocTreeNodeList } from './TocTreeNodeList';
 import { Container, List, Preloader } from './components';
 import { TocContextProvider } from './context';
 
-export const TableOfContents: FC<TableOfContentsProps> = ({ data, isLoading, theme = 'light' }) => {
+export const TableOfContents: FC<TableOfContentsProps> = ({
+  containerClassName,
+  data,
+  isLoading,
+  listItemClassName,
+  onItemClick,
+  theme = 'light',
+}) => {
   return (
-    <Container className={cx(s.tableOfContents, theme === 'dark' && s.dark)}>
+    <Container className={cx(s.tableOfContents, theme === 'dark' && s.dark, containerClassName)}>
       {isLoading ? (
         <Preloader />
       ) : !data ? null : (
-        <TocContextProvider data={data} theme={theme}>
+        <TocContextProvider
+          data={data}
+          listItemClassName={listItemClassName}
+          onItemClick={onItemClick}
+          theme={theme}
+        >
           <List>
             <TocTreeNodeList />
           </List>
@@ -26,7 +38,10 @@ export const TableOfContents: FC<TableOfContentsProps> = ({ data, isLoading, the
 };
 
 export interface TableOfContentsProps {
+  containerClassName?: string;
   data?: ITableOfContents;
   isLoading?: boolean;
+  listItemClassName?: string;
+  onItemClick?: (page: TocPage, event: MouseEvent) => void;
   theme?: 'dark' | 'light';
 }

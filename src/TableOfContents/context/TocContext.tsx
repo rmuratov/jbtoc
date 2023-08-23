@@ -1,6 +1,7 @@
 import {
   type Dispatch,
   type FC,
+  MouseEvent,
   type PropsWithChildren,
   type SetStateAction,
   createContext,
@@ -8,7 +9,7 @@ import {
   useState,
 } from 'react';
 
-import type { ITableOfContents, TocPageId, TocPages } from '../types';
+import type { ITableOfContents, TocPage, TocPageId, TocPages } from '../types';
 import type { Theme } from '../types/Theme';
 
 import { useActivePagePath } from '../hooks';
@@ -19,6 +20,8 @@ export const TocContext = createContext<ITocContext | undefined>(undefined);
 export const TocContextProvider: FC<PropsWithChildren<TocContextProviderProps>> = ({
   children,
   data,
+  listItemClassName,
+  onItemClick,
   theme,
 }) => {
   const pages = data.entities.pages;
@@ -28,8 +31,17 @@ export const TocContextProvider: FC<PropsWithChildren<TocContextProviderProps>> 
   const activePagePath = useActivePagePath(activePageId, pages);
 
   const value = useMemo(
-    () => ({ activePageId, activePagePath, pages, setActivePageId, theme, topLevelIds }),
-    [activePageId, activePagePath, pages, topLevelIds, theme],
+    () => ({
+      activePageId,
+      activePagePath,
+      listItemClassName,
+      onItemClick,
+      pages,
+      setActivePageId,
+      theme,
+      topLevelIds,
+    }),
+    [activePageId, activePagePath, pages, topLevelIds, theme, listItemClassName, onItemClick],
   );
 
   return <TocContext.Provider value={value}>{children}</TocContext.Provider>;
@@ -38,6 +50,8 @@ export const TocContextProvider: FC<PropsWithChildren<TocContextProviderProps>> 
 export interface ITocContext {
   activePageId: TocPageId | null;
   activePagePath: TocPageId[];
+  listItemClassName?: string;
+  onItemClick?: (page: TocPage, event: MouseEvent) => void;
   pages: TocPages;
   setActivePageId: Dispatch<SetStateAction<TocPageId | null>>;
   theme: Theme;
@@ -46,5 +60,7 @@ export interface ITocContext {
 
 export interface TocContextProviderProps {
   data: ITableOfContents;
+  listItemClassName?: string;
+  onItemClick?: (page: TocPage, event: MouseEvent) => void;
   theme: Theme;
 }

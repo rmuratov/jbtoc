@@ -138,3 +138,24 @@ describe('theme', () => {
     expect(screen.getByTestId('toc-container')).toHaveClass('dark');
   });
 });
+
+describe('custom classnames', () => {
+  test('passes container className', () => {
+    render(<TableOfContents containerClassName="testContainerClassName" data={data} />);
+    expect(screen.getByTestId('toc-container')).toHaveClass('testContainerClassName');
+  });
+
+  test('passes list item className', () => {
+    render(<TableOfContents data={data} listItemClassName="testListItemClassName" />);
+    expect(screen.getByText('Page 1')).toHaveClass('testListItemClassName');
+  });
+});
+
+describe('callbacks', () => {
+  test('calls onItemClick call back', async () => {
+    const handleItemClick = jest.fn();
+    render(<TableOfContents data={data} onItemClick={handleItemClick} />);
+    await userEvent.click(screen.getByText('Page 1'));
+    expect(handleItemClick).toHaveBeenCalledTimes(1);
+  });
+});

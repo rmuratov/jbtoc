@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import type { TocPage } from './TableOfContents/types';
+
 import s from './App.module.scss';
 import { TableOfContents } from './TableOfContents';
 import { useFetchTocData } from './TableOfContents/hooks';
@@ -10,9 +12,16 @@ function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  const handleItemClick = (page: TocPage) => console.log('Clicked item:', page);
+
   return (
     <div className={s.app}>
-      <TableOfContents data={data} isLoading={isLoading || state === 'loading'} theme={theme} />
+      <TableOfContents
+        data={data}
+        isLoading={isLoading || state === 'loading'}
+        onItemClick={handleItemClick}
+        theme={theme}
+      />
 
       <main>
         <h1>JB TOC</h1>

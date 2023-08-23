@@ -8,8 +8,11 @@ import { useExpandHandlers } from './useExpandHandlers';
 import { useHighlight } from './useHighlightMode';
 
 export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
-  const { pages } = useTocContext();
-  const { handleButtonExpandClick, handleItemClick, isExpanded } = useExpandHandlers(id);
+  const { listItemClassName, onItemClick, pages } = useTocContext();
+  const { handleButtonExpandClick, handleItemClick, isExpanded } = useExpandHandlers(
+    id,
+    onItemClick,
+  );
   const { current, level } = useHighlight(id, highlight);
 
   const page = pages[id];
@@ -17,7 +20,13 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
   return (
     <>
       <ListItemContainer>
-        <ListItem highlight={current} href={page.url} level={page.level} onClick={handleItemClick}>
+        <ListItem
+          className={listItemClassName}
+          highlight={current}
+          href={page.url}
+          level={page.level}
+          onClick={handleItemClick}
+        >
           {page.pages?.length && (
             <ButtonExpand isExpanded={isExpanded} onClick={handleButtonExpandClick} />
           )}
