@@ -14,6 +14,7 @@ import { useActivePagePath } from '../hooks';
 
 export const TocContext = createContext<ITocContext | undefined>(undefined);
 
+// TODO: Extract often changed values to separate context
 export const TocContextProvider: FC<PropsWithChildren<TocContextProviderProps>> = ({
   children,
   data,
