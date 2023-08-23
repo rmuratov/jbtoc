@@ -9,13 +9,13 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
   children,
   className,
   highlight,
-  isSelected,
   level,
   style,
   ...rest
 }) => {
-  const highlightFirstLevel = highlight === Highlight.FirstLevel && !isSelected;
-  const highlightLastLevel = highlight === Highlight.LastLevel && !isSelected;
+  const highlightFirstLevel = highlight === Highlight.FirstLevel;
+  const highlightLastLevel = highlight === Highlight.LastLevel;
+  const highlightSelected = highlight === Highlight.Selected;
 
   const levelStyle = { '--level': level } as CSSProperties;
 
@@ -25,7 +25,7 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
         s.listItem,
         highlightFirstLevel && s.highlightFirstLevel,
         highlightLastLevel && s.highlightLastLevel,
-        isSelected && s.selected,
+        highlightSelected && s.selected,
         className,
       )}
       data-testid="toc-list-item"
@@ -39,6 +39,5 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
 
 export interface ListItemProps extends AllHTMLAttributes<HTMLAnchorElement> {
   highlight: Highlight;
-  isSelected: boolean;
   level: number;
 }

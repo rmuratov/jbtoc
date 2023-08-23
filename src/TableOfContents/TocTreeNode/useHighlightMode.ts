@@ -3,15 +3,27 @@ import type { TocPageId } from '../types/ITableOfContents';
 import { useTocContext } from '../hooks';
 import { Highlight } from '../types/HighlightLevels';
 
-export function useHighlightMode(pageId: TocPageId, parent: Highlight) {
-  const { activePagePath, pages } = useTocContext();
+export function useHighlight(
+  pageId: TocPageId,
+  parent?: Exclude<Highlight, Highlight.Selected>,
+): { current: Highlight; level: Exclude<Highlight, Highlight.Selected> } {
+  const { activePageId, activePagePath } = useTocContext();
 
-  const page = pages[pageId];
-
-  const isInsideLastLevel = page.id === activePagePath.at(-1);
-  if (page.level > 0 && isInsideLastLevel) {
-    return Highlight.LastLevel;
+  if (parent === Highlight.None || !activePageId) {
+    return { current: Highlight.None, level: Highlight.None };
   }
 
-  return parent;
+  let level: Highlight;
+
+  if (!parent) {
+    const isActivePageInsideLevel = pageId === activePagePath[0];
+    level = isActivePageInsideLevel ? Highlight.FirstLevel : Highlight.None;
+  } else {
+    const isLastLevel = activePagePath.length > 0 && pageId === activePagePath.at(-1);
+    level = isLastLevel ? Highlight.LastLevel : parent;
+  }
+
+  const current = pageId === activePageId ? Highlight.Selected : level;
+
+  return { current, level };
 }

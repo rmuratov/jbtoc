@@ -6,25 +6,19 @@ import type { TocPageId } from '../types/ITableOfContents';
 import { ButtonExpand, ListItem, ListItemContainer } from '../components';
 import { useTocContext } from '../hooks';
 import { useExpandHandlers } from './useExpandHandlers';
-import { useHighlightMode } from './useHighlightMode';
+import { useHighlight } from './useHighlightMode';
 
 export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
-  const { activePageId, pages } = useTocContext();
+  const { pages } = useTocContext();
   const { handleButtonExpandClick, handleItemClick, isExpanded } = useExpandHandlers(id);
-  const highlightMode = useHighlightMode(id, highlight);
+  const { current, level } = useHighlight(id, highlight);
 
   const page = pages[id];
 
   return (
     <>
       <ListItemContainer>
-        <ListItem
-          highlight={highlightMode}
-          href={page.url}
-          isSelected={activePageId === id}
-          level={page.level}
-          onClick={handleItemClick}
-        >
+        <ListItem highlight={current} href={page.url} level={page.level} onClick={handleItemClick}>
           {page.pages?.length && (
             <ButtonExpand isExpanded={isExpanded} onClick={handleButtonExpandClick} />
           )}
@@ -32,13 +26,13 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
         </ListItem>
       </ListItemContainer>
 
-      {isExpanded && page.pages?.map(p => <TocTreeNode highlight={highlightMode} id={p} key={p} />)}
+      {isExpanded && page.pages?.map(p => <TocTreeNode highlight={level} id={p} key={p} />)}
     </>
   );
 };
 
 export interface TocTreeNodeProps {
-  highlight: Highlight;
+  highlight?: Exclude<Highlight, Highlight.Selected>;
   id: string;
   pages?: TocPageId[];
 }
