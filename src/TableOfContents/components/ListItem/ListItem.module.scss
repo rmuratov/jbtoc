@@ -11,7 +11,7 @@
   font-size: var(--item-font-size);
   line-height: var(--item-line-height);
 
-  transition: background-color 0.1s ease;
+  transition: background 0.1s ease;
 
   color: var(--item-text-color);
 
@@ -19,7 +19,7 @@
     background-color: var(--item-bg-color-hover);
   }
 
-  &.highlightPrimary:not(.selected) {
+  &.highlightLastLevel:not(.selected) {
     background-color: var(--item-highlighted-1-bg-color);
 
     &:hover {
@@ -27,7 +27,7 @@
     }
   }
 
-  &.highlightSecondary:not(.selected) {
+  &.highlightFirstLevel:not(.selected) {
     background-color: var(--item-highlighted-2-bg-color);
 
     &:hover {

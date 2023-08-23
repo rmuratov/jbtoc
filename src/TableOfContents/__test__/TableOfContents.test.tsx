@@ -92,9 +92,9 @@ describe('highlighting', () => {
     render(<TableOfContents data={data} />);
     await userEvent.click(screen.getByText('Page 1'));
 
-    expect(screen.getByText('Page 1 1')).toHaveClass('highlightSecondary');
-    expect(screen.getByText('Page 1 2')).toHaveClass('highlightSecondary');
-    expect(screen.getByText('Page 1 3')).toHaveClass('highlightSecondary');
+    expect(screen.getByText('Page 1 1')).toHaveClass('highlightFirstLevel');
+    expect(screen.getByText('Page 1 2')).toHaveClass('highlightFirstLevel');
+    expect(screen.getByText('Page 1 3')).toHaveClass('highlightFirstLevel');
   });
 
   test('highlights last level', async () => {
@@ -104,14 +104,14 @@ describe('highlighting', () => {
     await userEvent.click(screen.getByText('Page 1 1 1'));
     await userEvent.click(screen.getByText('Page 1 1 1 1'));
 
-    expect(screen.getByText('Page 1 1 1')).toHaveClass('highlightPrimary');
-    expect(screen.getByText('Page 1 1 1 2')).toHaveClass('highlightPrimary');
+    expect(screen.getByText('Page 1 1 1')).toHaveClass('highlightLastLevel');
+    expect(screen.getByText('Page 1 1 1 2')).toHaveClass('highlightLastLevel');
 
-    expect(screen.getByText('Page 1')).toHaveClass('highlightSecondary');
-    expect(screen.getByText('Page 1 1')).toHaveClass('highlightSecondary');
-    expect(screen.getByText('Page 1 1 2')).toHaveClass('highlightSecondary');
-    expect(screen.getByText('Page 1 2')).toHaveClass('highlightSecondary');
-    expect(screen.getByText('Page 1 3')).toHaveClass('highlightSecondary');
+    expect(screen.getByText('Page 1')).toHaveClass('highlightFirstLevel');
+    expect(screen.getByText('Page 1 1')).toHaveClass('highlightFirstLevel');
+    expect(screen.getByText('Page 1 1 2')).toHaveClass('highlightFirstLevel');
+    expect(screen.getByText('Page 1 2')).toHaveClass('highlightFirstLevel');
+    expect(screen.getByText('Page 1 3')).toHaveClass('highlightFirstLevel');
   });
 });
 

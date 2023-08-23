@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import type { HighlightMode } from '../types/HighlightLevels';
+import type { Highlight } from '../types/HighlightLevels';
 import type { TocPageId } from '../types/ITableOfContents';
 
 import { ButtonExpand, ListItem, ListItemContainer } from '../components';
@@ -38,7 +38,7 @@ export const TocTreeNode: FC<TocTreeNodeProps> = ({ highlight, id }) => {
 };
 
 export interface TocTreeNodeProps {
-  highlight: HighlightMode;
+  highlight: Highlight;
   id: string;
   pages?: TocPageId[];
 }

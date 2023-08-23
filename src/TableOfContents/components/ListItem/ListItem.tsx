@@ -2,7 +2,7 @@ import type { AllHTMLAttributes, CSSProperties, FC, PropsWithChildren } from 're
 
 import cx from 'clsx';
 
-import { HighlightMode } from '../../types/HighlightLevels';
+import { Highlight } from '../../types/HighlightLevels';
 import s from './ListItem.module.scss';
 
 export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
@@ -14,8 +14,8 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
   style,
   ...rest
 }) => {
-  const primary = highlight === HighlightMode.Primary;
-  const secondary = highlight === HighlightMode.Secondary;
+  const highlightFirstLevel = highlight === Highlight.FirstLevel;
+  const highlightLastLevel = highlight === Highlight.LastLevel;
 
   const levelStyle = { '--level': level } as CSSProperties;
 
@@ -23,8 +23,8 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
     <a
       className={cx(
         s.listItem,
-        primary && s.highlightPrimary,
-        secondary && s.highlightSecondary,
+        highlightFirstLevel && s.highlightFirstLevel,
+        highlightLastLevel && s.highlightLastLevel,
         isSelected && s.selected,
         className,
       )}
@@ -38,7 +38,7 @@ export const ListItem: FC<PropsWithChildren<ListItemProps>> = ({
 };
 
 export interface ListItemProps extends AllHTMLAttributes<HTMLAnchorElement> {
-  highlight: HighlightMode;
+  highlight: Highlight;
   isSelected: boolean;
   level: number;
 }

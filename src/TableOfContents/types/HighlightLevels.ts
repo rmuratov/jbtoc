@@ -1,5 +1,5 @@
-export enum HighlightMode {
+export enum Highlight {
   None = 'none',
-  Primary = 'primary',
-  Secondary = 'secondary',
+  FirstLevel = 'first-level',
+  LastLevel = 'last-level',
 }
