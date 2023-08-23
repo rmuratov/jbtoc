@@ -9,15 +9,6 @@
   .item {
     height: var(--item-line-height);
     background-color: var(--preloader-item-color);
-
     margin-bottom: calc(var(--item-padding-vertical) * 2);
-
-    &.medium {
-      width: 80%;
-    }
-
-    &.small {
-      width: 50%;
-    }
   }
 }
